@@ -12,12 +12,17 @@ class Menu extends Component {
         super(props);
         this.state = {
             mobileMenu: false,
-            menuHeight: 50
+            menuHeight: 50,
+            logoWidth: 60
         }
     }
 
     componentDidMount() {
-        this.setState({ menuHeight: this.refs.menu.clientHeight });
+        this.setState({ 
+            menuHeight: this.refs.menu.clientHeight,
+            logoWidth: this.refs.logo.clientWidth
+        });
+        console.log(this.refs.logo)
         window.addEventListener('resize', () => {
             if (window.innerWidth <= 768) {
                 this.setState({ menuHeight: this.refs.menu.clientHeight });
@@ -49,10 +54,10 @@ class Menu extends Component {
     render() {
         return (
             <nav className="menu" ref="menu">
-                <div className="menu__logo">
+                <div className="menu__logo" ref="logo">
                     <NavLink
                         exact
-                        to="/"
+                        to="/"                        
                         className="menu__link"
                         activeClassName='menu__link--active'
                     >
@@ -61,7 +66,7 @@ class Menu extends Component {
                 </div>
                 <ul
                     className={this.state.mobileMenu ? "menu__list menu__list--show" : "menu__list"}
-                    style={{ top: `${this.state.menuHeight}px` }}
+                    style={{ top: `${this.state.menuHeight}px`, paddingRight: `${this.state.logoWidth}px` }}
                 >
                     <li className="menu__list-item">
                         <NavLink

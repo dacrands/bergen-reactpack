@@ -14,7 +14,7 @@
 3. Fix Trianglify glitch 
 4. Fall back styles for Edge (i.e., :root variables)
 5. 404 page
-6. Blog component
+6. ~~Blog component~~
 7. Move stateless components to separate dir
 8. Add article element to Blog
 

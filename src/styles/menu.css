@@ -50,14 +50,17 @@
 
 
 .menu__list {
-/*   outline: 4px solid salmon; */
+    /* outline: 4px solid salmon; */
     height: 100%;
-    margin-top: 0;
+    margin: 0 auto;
+    /* margin-top: 0;  */
+    width: 100%;
+    max-width: 1500px;
     /* position: fixed; */
     display: flex;
     list-style: none;
     justify-content: space-around;
-    align-items: center;
+    align-items: center;    
     color: var(--light);
 }
 
@@ -124,7 +127,7 @@
     right: 0;
     /* top: 30px; */
     margin-left: min-content;
-    padding: 15px;
+    padding: 10px;
     color: blue;
 /*   margin-top: 20px; */
     width: min-content;
