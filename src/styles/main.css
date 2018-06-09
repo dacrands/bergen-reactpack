@@ -2,8 +2,10 @@
     /*   --primary: rgb(61, 56, 154); */
     /* --primary: rgba(0,0,0,0.8); */
     --shadow: rgba(0,0,0,0.3);
-    --primary: #290238e6;
-    --primary-light: #421155;
+    --primary-dark: #290238e6;
+    --primary: #421155;
+    /* --primary-light: #7A4A8D; */
+    --primary-light: #421155d0;
     /* --primary-light: #680290; */
     /* --light: #f7f7f7e1; */
     --light: #f1f1f1;
@@ -55,8 +57,8 @@ h2, h3, h4, h5 {
 .thumbnail {
     max-width: 300px;    
     /* box-shadow: 2px 2px 5px rgba(0,0,0,0.3); */
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    box-shadow: 0 8px 4px -6px rgba(0,0,0,0.3);
     border-radius: 5px;
     padding: 5px;
-    background: #f3f3f3;
+    background: var(--light);    
 }

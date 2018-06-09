@@ -1,10 +1,12 @@
 .header {
     font-size: 2.3rem;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     /* background: #272728;
     color: #f9f9f9; */
-    color: var(--primary-light);
-    background: #f9f9f9;
+    color: var(--primary);
+    background: var(--light);
+    /* color: var(--light);
+    background: var(--primary); */
     /* background: var(--comp);
     color: var(--primary); */
     /* background: var(--primary);

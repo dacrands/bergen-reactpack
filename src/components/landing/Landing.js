@@ -11,21 +11,7 @@ import '../../styles/info.css'
 
 class Landing extends Component {
 
-    constructor(props){
-        super(props);
-        this.state = {
-          scriptHTML: Trianglify
-        };
-    }
-
-    componentDidMount() {
-        console.log(this.state.scriptHTML)
-        this.setState({ scriptHTML:Trianglify });    
-        const script = document.createElement("script");
-        script.type = "text/javascript";
-        script.innerHTML = this.state.scriptHTML;
-        document.body.appendChild(script);
-    }
+  
 
 
     render() {

@@ -21,12 +21,12 @@ const App = () => (
   <Router>
     <div>
       <Menu />
-      <Route exact path="/" component={Landing} />
-      <Route path="/3sp" component={Scholars} />
-      <Route path="/contact" component={Contact} />
-      <Route path="/calendar" component={Calendar} />
-      <Route path="/benefits" component={Benefits} />
-      <Route path="/blog" component={Blog} />
+        <Route exact path="/" component={Landing} />
+        <Route path="/3sp" component={Scholars} />
+        <Route path="/contact" component={Contact} />
+        <Route path="/calendar" component={Calendar} />
+        <Route path="/benefits" component={Benefits} />
+        <Route path="/blog" component={Blog} />
       <Footer />
     </div>
   </Router>

@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import { Link, NavLink } from "react-router-dom";
-import createHistory from "history/createBrowserHistory";
+
 
 import '../styles/menu.css';
+
 
 
 class Menu extends Component {
@@ -83,6 +84,15 @@ class Menu extends Component {
                     </li>
                     <li className="menu__list-item">
                         <NavLink
+                            to="/calendar"
+                            className="menu__list-link"
+                            activeClassName='menu__link--active'
+                        >
+                            Calendar
+                        </NavLink>
+                    </li>
+                    <li className="menu__list-item">
+                        <NavLink
                             to="/contact"
                             className="menu__list-link"
                             activeClassName='menu__link--active'
@@ -90,7 +100,7 @@ class Menu extends Component {
                             Contact
                         </NavLink>
                     </li>
-                    <li className="menu__list-item">
+                    <li className="menu__list-item" id="dropdown">
                         <button
                             className="menu__list-link menu__button"
                             id="dropdownButton"                            
@@ -108,6 +118,15 @@ class Menu extends Component {
                                 </Link>
                                 {/* <a className="menu__dropdown-link" href="">Other stuff</a> */}
                             </li>
+                            {/* <li className="menu__dropdown-item">
+                                <Link
+                                    className="menu__list-link"
+                                    to="/calendar"
+
+                                >
+                                    Calendar
+                                </Link>                     
+                            </li> */}
                             <li className="menu__dropdown-item">
                                 <a
                                     className="menu__list-link"
