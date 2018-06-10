@@ -61,7 +61,8 @@ class Menu extends Component {
                         className="menu__link"
                         activeClassName='menu__link--active'
                     >
-                        BCC
+                        &#10092;STEM&#10093;
+                        {/* &infin;	 */}
                     </NavLink>
                 </div>
                 <ul
