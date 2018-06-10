@@ -40,6 +40,7 @@
 
 .menu__logo {
     /*   outline: 3px solid lime; */
+    margin: 2px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -210,6 +211,10 @@
     padding: 8px;
     }
 
+    .menu__logo {
+        margin: 0;
+    }
+
     .menu__burger {
     /*     outline: 2px solid yellow; */
     display: flex;
@@ -253,6 +258,7 @@
     height: min-content;
     width: 100%;
     align-content: flex-end;
+    
     }
 
     .menu__list-link {
@@ -261,7 +267,6 @@
     justify-items: flex-end;
     width: 100%;
     padding: 15px;
-    text-align: right;
     }
 
     .menu__dropdown {

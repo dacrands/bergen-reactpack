@@ -3,6 +3,15 @@ import Header from './Header';
 import '../styles/form.css';
 
 class Contact extends Component {
+
+    componentDidMount() {
+        document.body.style = 'background: var(--light)'
+    }
+
+    componentWillUnmount() {
+        document.body.style = 'background: none'
+    }
+
     render() {
         return (
             <div>

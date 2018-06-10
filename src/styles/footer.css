@@ -1,6 +1,6 @@
 .footer {
     /* background: rgba(0,0,0,0.9); */
-    background: rgba(41, 2, 56, 0.9);
+    background: var(--primary-dark);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.219);
     font-size: 0.8rem;
     display: flex;

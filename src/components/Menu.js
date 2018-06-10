@@ -22,7 +22,7 @@ class Menu extends Component {
             menuHeight: this.refs.menu.clientHeight,
             logoWidth: this.refs.logo.clientWidth
         });
-        console.log(this.refs.logo)
+        
         window.addEventListener('resize', () => {
             if (window.innerWidth <= 768) {
                 this.setState({ menuHeight: this.refs.menu.clientHeight });
@@ -84,7 +84,7 @@ class Menu extends Component {
                             className="menu__list-link"
                             activeClassName='menu__link--active'
                         >
-                            STEM Student Scholars
+                            3SP
                         </NavLink>
                     </li>
                     <li className="menu__list-item">
@@ -93,7 +93,7 @@ class Menu extends Component {
                             className="menu__list-link"
                             activeClassName='menu__link--active'
                         >
-                            Calendar
+                            Events
                         </NavLink>
                     </li>
                     <li className="menu__list-item">
