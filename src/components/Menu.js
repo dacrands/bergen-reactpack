@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link, NavLink } from "react-router-dom";
-
+import Logo from '../images/color-logo.svg';
 
 import '../styles/menu.css';
 
@@ -15,6 +15,8 @@ class Menu extends Component {
             menuHeight: 50,
             logoWidth: 60
         }
+
+        console.log(this.props.history)
     }
 
     componentDidMount() {
@@ -35,8 +37,7 @@ class Menu extends Component {
         });
 
         window.addEventListener('scroll', () => {
-            console.log(window.scrollY);
-            if (window.scrollY > 1 && window.innerWidth >= 768) {
+            if (window.scrollY > 1) {
                 return this.refs.menu.classList.remove('menu__landing');
             }            
             return this.refs.menu.classList.add('menu__landing');
@@ -74,8 +75,11 @@ class Menu extends Component {
                         className="menu__link"
                         activeClassName='menu__link--active'
                     >
-                        &#10092;STEM&#10093;
+                        {/* &#10092;STEM&#10093; */}
                         {/* &infin;	 */}
+                        <Logo width={60} height={40} />
+
+                        
                     </NavLink>
                 </div>
                 <ul

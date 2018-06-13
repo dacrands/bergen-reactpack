@@ -10,9 +10,9 @@ if (process.env.NODE_ENV !== 'production') {
 const html = document.getElementsByTagName('html');
 html.lang = 'en';
 
-const meta=document.createElement('meta');
-meta.name='viewport';
-meta.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0');
+// const meta=document.createElement('meta');
+// meta.name='viewport';
+// meta.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0');
 
 const app = document.createElement('div');
 app.id = "app"
@@ -30,7 +30,7 @@ console.log(triangleScript);
 // script.src = "https://cdnjs.cloudflare.com/ajax/libs/trianglify/1.1.0/trianglify.min.js";
 
 
-document.getElementsByTagName('head')[0].appendChild(meta);
+// document.getElementsByTagName('head')[0].appendChild(meta);
 document.querySelector('body').appendChild(app);
 
 ReactDOM.render(<App />, document.getElementById('app'));
