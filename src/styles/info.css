@@ -17,6 +17,13 @@
     /* max-width: min-content; */
     /* white-space: nowrap; */
     /* margin: 0 auto; */
+    color: var(--primary-light);
+    font-size: 2rem;
+}
+
+.info span {
+    color: var(--comp);
+    font-size: 2rem;
 }
 
 .info .hr {

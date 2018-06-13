@@ -37,8 +37,8 @@ class Info extends Component{
           iterate++;
           return (
             <div key={iterate} className="info__content">
-              <h2>{x.Title}
-              <hr className="hr" />
+              <h2> <span>&#8942;</span>  {x.Title}
+              {/* <hr className="hr" /> */}
               </h2>
               <p>{x.Desc}</p>
               <Link to={x.Link}>{x.LinkText}</Link>
