@@ -17,6 +17,7 @@
     display: block;
 }
 
+
 .menu 
 .menu__list
 .menu__list-item 
@@ -29,13 +30,35 @@
 /* Now this is me */
 
 .menu {
-/*     outline: 4px dashed black; */    
+    /* outline: 4px dashed black;     */
     position: fixed;
     z-index: 9;
     width: 100%;
     display: grid;        
     grid-template-columns: min-content 1fr;
-    background: var(--primary-dark);    
+    background: var(--primary-dark);
+    transition: all 250ms ease-in;
+}
+
+.menu__landing {
+    background: none;
+    padding-top: 10px;
+    /* position: absolute;
+    top: 0; */
+
+}
+
+.menu__landing .menu__list-item .menu__list-link{
+    /* outline: 3px dashed black;     */
+    margin-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+}
+
+.menu__landing .menu__list-item .menu__list-link:hover {
+    color: var(--light);    
+    border-bottom: 2px solid var(--comp);
+    transition: none;
 }
 
 .menu__logo {
@@ -102,6 +125,8 @@
     text-shadow: 0 0 0.5px #ffffff */
 }
 
+
+
 .menu__button {
     border: none;
     background: inherit;
@@ -132,7 +157,6 @@
     padding: 10px;
     color: blue;
 /*   margin-top: 20px; */
-    width: min-content;
     box-shadow: 0 0 2px var(--shadow);
     background: #ffffff;
     text-align: center;
@@ -140,7 +164,7 @@
     
 }
 
-.menu__dropdown .menu__list-link {
+.menu__dropdown-link {
     padding: 0;
     padding-bottom: 9px;
     color: inherit;
@@ -148,7 +172,7 @@
     white-space: nowrap;
 }
 
-.menu__dropdown .menu__list-link:hover {
+.menu__dropdown-link:hover {
     color: var(--primary-dark);
 }
 
@@ -272,7 +296,8 @@
 
     .menu__dropdown {
         margin-top: 50px;
-        width: 100%;
+        max-width: min-content;
+        left: 0;
     }
 
 }

@@ -5,8 +5,25 @@
     justify-content: space-around;
     font-family: "Raleway",sans-serif;
     text-align: center;
+
+    /* background: #121213;
+    color: var(--light); */
+
+    /* background: var(--light); */
 }
 
+.info h2 {
+    /* outline: 3px solid red; */
+    /* max-width: min-content; */
+    /* white-space: nowrap; */
+    /* margin: 0 auto; */
+}
+
+.info .hr {
+    background: var(--comp);
+    width: 40%;
+    margin: 0 15px;
+}
 
 
 .info__content {

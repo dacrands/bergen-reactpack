@@ -23,9 +23,9 @@ triangleLink.src = "https://cdnjs.cloudflare.com/ajax/libs/trianglify/1.1.0/tria
 const triangleScript = document.createElement('script');
 console.log(triangleScript);
 // debugger;
-triangleScript.innerHTML = "(varpattern=Trianglify({width:window.innerWidth,cell_size:15,variance:60,stroke_width:5,x_colors:[\"#290238\",\"#421155\",\"#7A4A8D\",\"#9A73A9\"],y_colors:\"match_x\"}).canvas(document.getElementById(\"myCanvas\"))})();"
-document.querySelector('body').appendChild(triangleLink);
-document.querySelector('body').appendChild(triangleScript);
+// triangleScript.innerHTML = "(varpattern=Trianglify({width:window.innerWidth,cell_size:15,variance:60,stroke_width:5,x_colors:[\"#290238\",\"#421155\",\"#7A4A8D\",\"#9A73A9\"],y_colors:\"match_x\"}).canvas(document.getElementById(\"myCanvas\"))})();"
+// document.querySelector('body').appendChild(triangleLink);
+// document.querySelector('body').appendChild(triangleScript);
 // const script = document.createElement('script');
 // script.src = "https://cdnjs.cloudflare.com/ajax/libs/trianglify/1.1.0/trianglify.min.js";
 

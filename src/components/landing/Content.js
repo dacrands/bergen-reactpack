@@ -28,7 +28,8 @@ class Content extends Component {
                         </FadeIn>                        
                     </div>
                     <div className="content__content">
-                        <h2>Running Start Program</h2>
+                        <h1>Running Start Program</h1>
+                        <hr className="hr"/>
                         <p>
                             Excellence through preparation
                         </p>
@@ -62,7 +63,7 @@ class Content extends Component {
                         </FadeIn>                        
                     </div>
                     <div className="content__content">
-                        <h2>3SP</h2>
+                        <h1>3SP</h1>
                         <p>
                             The STEM Student Scholars Program
                     </p>

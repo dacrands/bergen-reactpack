@@ -23,7 +23,7 @@ const App = () => (
       <Menu />
         <Route exact path="/" component={Landing} />
         <Route path="/3sp" component={Scholars} />
-        <Route path="/contact" component={Contact} />
+        <Route path="/contact" component={Contact} />        
         <Route path="/calendar" component={Calendar} />
         <Route path="/benefits" component={Benefits} />
         <Route path="/blog" component={Blog} />

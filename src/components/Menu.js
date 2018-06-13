@@ -22,11 +22,24 @@ class Menu extends Component {
             menuHeight: this.refs.menu.clientHeight,
             logoWidth: this.refs.logo.clientWidth
         });
+
+        if (window.innerWidth <= 768) {
+            this.refs.menu.classList.remove('menu__landing');
+        }
         
         window.addEventListener('resize', () => {
             if (window.innerWidth <= 768) {
+                this.refs.menu.classList.remove('menu__landing');
                 this.setState({ menuHeight: this.refs.menu.clientHeight });
             };
+        });
+
+        window.addEventListener('scroll', () => {
+            console.log(window.scrollY);
+            if (window.scrollY > 1 && window.innerWidth >= 768) {
+                return this.refs.menu.classList.remove('menu__landing');
+            }            
+            return this.refs.menu.classList.add('menu__landing');
         });
     }
 
@@ -53,7 +66,7 @@ class Menu extends Component {
 
     render() {
         return (
-            <nav className="menu" ref="menu">
+            <nav className="menu menu__landing" ref="menu">
                 <div className="menu__logo" ref="logo">
                     <NavLink
                         exact
@@ -105,7 +118,7 @@ class Menu extends Component {
                         >
                             Contact
                         </NavLink>
-                    </li>
+                    </li>                    
                     <li className="menu__list-item" id="dropdown">
                         <button
                             className="menu__list-link menu__button"
@@ -116,7 +129,7 @@ class Menu extends Component {
                         <ul className="menu__dropdown">
                             <li className="menu__dropdown-item">
                                 <Link
-                                    className="menu__list-link"
+                                    className="menu__dropdown-link"
                                     to="/3sp"
 
                                 >
@@ -135,7 +148,7 @@ class Menu extends Component {
                             </li> */}
                             <li className="menu__dropdown-item">
                                 <a
-                                    className="menu__list-link"
+                                    className="menu__dropdown-link"
                                     href="https://bergen.edu/faculty-staff/grants-administration/awards/stem/running-start-program/"
                                 >
                                     Running Start Program
@@ -143,7 +156,7 @@ class Menu extends Component {
                             </li>
                             <li className="menu__dropdown-item">
                                 <a
-                                    className="menu__list-link"
+                                    className="menu__dropdown-link"
                                     href="http://bergen.edu/stemsummit"
                                 >
                                     STEM Summit
