@@ -9,21 +9,21 @@ class Info extends Component{
       Info: [
         {
           Title: "About",
-          Accent: "&#8942;",
+          Accent: "\u24D8",
           Desc: "At Bergen Community College, our mission is to provide our STEM students with the skills essential to success at 4-year institutions and beyond.",
           LinkText: "Learn More",
           Link: "#"
         },
         {
           Title: "Research",
-          Accent: "<span>&#8942;</span>",
+          Accent: "\uD83D\uDD6E",
           Desc: "From rockets to algae biodiesel, Bergen Community college offers STEM students a wide variety of research opportunities.",
           LinkText: "Student Projects",
           Link: "Projects"
         }, 
         {
           Title: "Join STEM",
-          Accent: "<span>&#8942;</span>",
+          Accent: "\u2A1D",
           Desc: "Learn some of the benefits of pursuing a career in Science, Technology, Engineering, and Mathematics. ",
           LinkText: "Benefits of STEM",
           Link: "benefits"
@@ -41,11 +41,21 @@ class Info extends Component{
           return (
             <div key={iterate} className="info__content">
             {/* {iterate % 2 === 0 ? <span>&#8942;</span> : <span>&#8943;</span>} */}
-              <h2><span>&#8942;</span>   {x.Title}              
-              </h2>              
+              <div>
+              <span>{x.Accent}</span>
+                <h2>{x.Title}</h2>
+                
+                </div>      
+              
               <p>{x.Desc}</p>
-              <Link to={x.Link}>{x.LinkText}</Link>
+              <Link className="info__link" to={x.Link}>{x.LinkText}</Link>
+
+              <div>
+              
+              </div>
+              
             </div>
+            
           )
         })}
       </div>

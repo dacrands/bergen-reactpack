@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { Link } from "react-router-dom";
+
+
 import FadeIn from 'react-lazyload-fadein';
 
 import Video from '../Video';
@@ -27,12 +30,19 @@ class Content extends Component {
                             }                              
                         </FadeIn>                        
                     </div>
-                    <div className="content__content">
-                        <h1> <span>&#8944;</span> Running Start Program</h1>
+                    {/* <span className="content__accent">&#8944;</span>  */}
+                    <div className="content__text">
                         
-                        <p>
-                            Excellence through preparation
-                        </p>
+                        <h1> 
+                        Running Start Program 
+                        </h1>                        
+                        <h2>
+                            Pre-semester review classes 
+                        </h2>
+
+                        {/* <p className="lead">
+                        Pre-semester review classes 
+                        </p> */}
                         <p>
                             Prep Classes are designed to give students a better
                             foundation to start the courses they will be taking in
@@ -62,9 +72,9 @@ class Content extends Component {
                             }                              
                         </FadeIn>                        
                     </div>
-                    <div className="content__content">
+                    <div className="content__text">
                         <h1>3SP</h1>
-                        <p>
+                        <p className="lead">
                             The STEM Student Scholars Program
                     </p>
                         <p>
@@ -73,13 +83,43 @@ class Content extends Component {
                             to ensure their success in securing research internships and successful
                             transfer to their targeted 4-year institution.
                     </p>
-                        <a href="/3sp">Learn More</a>
+                        <Link to="/3sp">Learn More</Link>
                     </div>
                 </div>
 
 
-                <div className="content">
-                    <Video />
+                <div className="content content__dark">
+                    <div>
+                        <Video />
+                    </div>
+                    <div className="content__form">
+                    <form action="" className="form">
+                        <div className="form__item">
+                            <label htmlFor="email" className="form__item-label">Email</label>
+                            <input type="text" className="form__item-label" />
+                        </div>
+                        <div className="form__item">
+                            <label htmlFor="major" className="form__item-label">Major</label>
+                            <input name="major" type="text" className="form__item-label"/>
+                        </div>
+                        <div className="form__item">
+                            <label htmlFor="title" className="form__item-label">Project Title</label>
+                            <input name="title" type="text" className="form__item-label"/>
+                        </div>
+                        <div className="form__item">
+                            <label htmlFor="desc" className="form__item-label">Description</label>
+                            <textarea 
+                                name="desc" 
+                                type="text" 
+                                className="form__item-label" 
+                                rows={15}>
+                            </textarea>
+                        </div>                        
+                        <button className="form__button">
+                            Submit
+                        </button>                        
+                    </form>  
+                        </div>                 
                 </div>
             </div>
 

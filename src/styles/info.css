@@ -1,6 +1,6 @@
 .info {
-    min-height: 35vh;
-    padding-top: 2vh;
+    min-height: 38vh;
+    /* padding-top: 1vh; */
     display: flex;
     justify-content: space-around;
     font-family: "Raleway",sans-serif;
@@ -12,20 +12,21 @@
     /* background: var(--light); */
 }
 
-.info h2 {
+.info__content h2 {
     /* outline: 3px solid red; */
     /* max-width: min-content; */
     /* white-space: nowrap; */
     /* margin: 0 auto; */
-    margin-top: 0;
+    /* margin: 0; */
     color: var(--primary-light);
-    font-size: 2rem;
-    margin-left: -16px;
+    font-size: 1.8rem;
+    margin-top: 0;
+    
 }
 
 .info span {
     color: var(--comp);
-    font-size: 3rem;
+    font-size: 5rem;
 }
 
 .info .hr {
@@ -37,9 +38,18 @@
 
 .info__content {
     max-width: 400px;
-    margin: 0 10px;
+    margin: 0 30px;
+    margin-bottom: 20px;
 }
 
+.info__link {
+    /* border: 1px solid var(--comp);
+    padding: 5px;
+    border-radius: 3px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.2); */
+    font-size: 1.2rem;
+    /* color: rgb(34, 99, 240); */
+}
 
 @media(max-width:768px) {
     .info {

@@ -13,7 +13,7 @@
     --light: #f1f1f1;
     --dark: #424040;
     --comp: #FFD513;
-    --comp-light: rgb(214, 153, 255);
+    --comp-light: rgba(248, 247, 242, 0.849);
 }
 
 * {
@@ -34,6 +34,15 @@ a:visited:active{
 
 } */
 
+p {
+    color: var(--dark);
+}
+
+.lead {
+    font-size: 1.3rem;
+    
+}
+
 a:link {
     text-decoration: none;
 }
@@ -44,10 +53,12 @@ h2, h3, h4, h5 {
 }
 
 .container {
+    /* outline: 5px dashed black; */
     max-width: 1000px;
     margin: 0 auto;
-    background: #ffffff;
+    /* background: #ffffff; */
 }
+
 
 .img-fluid {
     width: 100%;
