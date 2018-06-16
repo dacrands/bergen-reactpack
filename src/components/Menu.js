@@ -14,9 +14,7 @@ class Menu extends Component {
             mobileMenu: false,
             menuHeight: 50,
             logoWidth: 60
-        }
-
-        console.log(this.props.history)
+        }        
     }
 
     componentDidMount() {
@@ -67,7 +65,7 @@ class Menu extends Component {
 
     render() {
         return (
-            <nav className="menu menu__landing" ref="menu">
+            <nav className={this.props.isLanding ? "menu" : "menu menu__landing"} ref="menu">
                 <div className="menu__logo" ref="logo">
                     <NavLink
                         exact
@@ -130,7 +128,7 @@ class Menu extends Component {
                         >
                             Resources&#x25BE;
                         </button>
-                        <ul className="menu__dropdown">
+                        <ul className="menu__dropdown shadow">
                             <li className="menu__dropdown-item">
                                 <Link
                                     className="menu__dropdown-link"

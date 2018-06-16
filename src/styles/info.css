@@ -1,6 +1,6 @@
 .info {
-    min-height: 38vh;
-    /* padding-top: 1vh; */
+    min-height: 35vh;
+    /* padding: 2vh 0; */
     display: flex;
     justify-content: space-around;
     font-family: "Raleway",sans-serif;
@@ -19,6 +19,7 @@
     /* margin: 0 auto; */
     /* margin: 0; */
     color: var(--primary-light);
+    color: var(--dark);
     font-size: 1.8rem;
     margin-top: 0;
     
@@ -26,6 +27,8 @@
 
 .info span {
     color: var(--comp);
+    color: var(--dark);
+    color: var(--primary-light);
     font-size: 5rem;
 }
 

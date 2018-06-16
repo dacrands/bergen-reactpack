@@ -47,9 +47,10 @@ a:link {
     text-decoration: none;
 }
 
+
 h2, h3, h4, h5 {
     color: var(--dark);
-    font-weight: 700;
+    font-weight: bold;
 }
 
 .container {
@@ -72,4 +73,8 @@ h2, h3, h4, h5 {
     border-radius: 5px;
     padding: 5px;
     background: var(--light);    
+}
+
+.shadow {
+    box-shadow: 0 3px 12px rgba(0,0,0,0.2);
 }

@@ -20,15 +20,15 @@ class Contact extends Component {
                     <form action="" className="form">
                         <div className="form__item">
                             <label htmlFor="email" className="form__item-label">Email</label>
-                            <input type="text" className="form__item-label" />
+                            <input type="text" className="form__item-input" />
                         </div>
                         <div className="form__item">
                             <label htmlFor="major" className="form__item-label">Major</label>
-                            <input name="major" type="text" className="form__item-label"/>
+                            <input name="major" type="text" className="form__item-input"/>
                         </div>
                         <div className="form__item">
                             <label htmlFor="title" className="form__item-label">Project Title</label>
-                            <input name="title" type="text" className="form__item-label"/>
+                            <input name="title" type="text" className="form__item-input"/>
                         </div>
                         <div className="form__item">
                             <label htmlFor="desc" className="form__item-label">Description</label>

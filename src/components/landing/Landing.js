@@ -11,9 +11,6 @@ import '../../styles/info.css'
 
 class Landing extends Component {
 
-  
-
-
     render() {
         return (
             <div>

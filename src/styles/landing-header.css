@@ -4,7 +4,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 62vh; 
+    height: 65vh; 
       
     /* background: var(--primary-light); */
 }
@@ -12,14 +12,14 @@
 .overlay{
     font-family: 'Raleway', sans-serif;
     font-weight: 100;
-    font-size: 7rem;
+    font-size: 6vw;
     color: #e4e7eb;
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, .25);
 }
 
 #myCanvas{
-    height: 62vh;
+    height: 65vh;
     width: 100%;
     margin: 0;
     position: absolute;
@@ -35,7 +35,7 @@
 }
 
 
-@media (max-width:1000px) {
+@media (max-width:1500px) {
     .overlay {
         font-size: 8vw;
     }
