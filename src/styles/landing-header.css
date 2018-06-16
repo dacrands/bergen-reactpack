@@ -30,7 +30,7 @@
     background: var(--primary-light);    
     background: -webkit-linear-gradient(-45deg, var(--primary-dark), var(--primary-light));  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(-45deg, var(--primary-dark), var(--primary-light)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+    
     /* transform: rotateX(10deg); */
 }
 

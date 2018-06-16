@@ -35,7 +35,7 @@ class Contact extends Component {
                             <textarea 
                                 name="desc" 
                                 type="text" 
-                                className="form__item-label" 
+                                className="form__item-textarea" 
                                 rows={15}>
                             </textarea>
                         </div>                        

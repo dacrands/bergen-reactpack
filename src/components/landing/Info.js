@@ -16,7 +16,7 @@ class Info extends Component{
         },
         {
           Title: "Research",
-          Accent: "\uD83D\uDD6E",
+          Accent: "\u2699",
           Desc: "From rockets to algae biodiesel, Bergen Community college offers STEM students a wide variety of research opportunities.",
           LinkText: "Student Projects",
           Link: "Projects"

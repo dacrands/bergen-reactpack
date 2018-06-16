@@ -1,11 +1,11 @@
 :root {
-    --shadow: rgba(0,0,0,0.3);
+    /* --shadow: rgba(0,0,0,0.3);
     --primary-dark: #290238e6;
     --primary: #421155;
     --primary-light: #421155d0;
     --light: #f1f1f1;
     --dark: #424040;
-    --comp: #FFDF77;
+    --comp: #FFDF77; */
 
     --primary-dark: #1a075ee6;
     --primary: #3f19c7f1;
@@ -13,7 +13,7 @@
     --light: #f1f1f1;
     --dark: #424040;
     --comp: #FFD513;
-    --comp-light: rgba(248, 247, 242, 0.849);
+    --comp-light: hsla(49, 92%, 75%, 0.849);
 }
 
 * {

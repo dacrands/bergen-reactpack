@@ -75,9 +75,9 @@ class Menu extends Component {
                         className="menu__link"
                         activeClassName='menu__link--active'
                     >
-                        {/* &#10092;STEM&#10093; */}
+                        &#10092;STEM&#10093;
                         {/* &infin;	 */}
-                        <Logo width={60} height={40} />
+                        {/* <Logo width={60} height={40} /> */}
 
                         
                     </NavLink>
