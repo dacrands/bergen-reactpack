@@ -60,7 +60,10 @@ CONTENT ITEMS
 .content__img {    
     display: flex;
     justify-content: center;
+    
 }
+
+
 
 
 .content__video {
@@ -70,6 +73,7 @@ CONTENT ITEMS
 
 .content__img .img-fluid{
     max-width: 600px;
+    height: 100%;
 }
 
 .content__content .hr {

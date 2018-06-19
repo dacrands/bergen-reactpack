@@ -42,6 +42,11 @@
     padding: 5px;
 }
 
+.box__img {
+    outline: 3px solid green;
+    
+}
+
 .box__content {
     /* outline: 3px solid blue; */
     height: min-content;

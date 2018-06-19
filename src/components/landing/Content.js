@@ -18,7 +18,7 @@ class Content extends Component {
                 <div className="content--light">
                 {/* CONTENT */}
                     <div className="content">
-                        <div className="content__img">
+                        <div className="content__img img--loader">
                             <FadeIn height={500}>
                                 {
                                     onload => (
@@ -52,7 +52,7 @@ class Content extends Component {
                 {/* CONTENT */}
                 <div className="content--med">
                     <div className="content">                                            
-                        <div className="content__img">
+                        <div className="content__img img--loader">
                             <FadeIn height={500}>
                                 {
                                     onload => (

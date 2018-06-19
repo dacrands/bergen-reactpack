@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import FadeIn from 'react-lazyload-fadein';
 
 import Header from './Header';
 
@@ -66,7 +67,22 @@ class Benefits extends Component {
                                 <h1>Events</h1>
                             </div>
                             <p>Please <a href="mailto:stemsummit@bergen.edu">email us</a> for a complete list of events.</p>
-                            <img className="img-fluid thumbnail" src={algae} alt="algae" />
+                            <div>
+                            <FadeIn height={500}>
+                                {
+                                    onload => (
+                                        <img
+                                            onLoad={onload}
+                                            src={algae}
+                                            className="img-fluid thumbnail"
+                                            alt="algae"
+                                        />
+                                    )
+                                }                              
+                            </FadeIn>
+                            
+                            </div>
+                            
                         </div>
                         <div>
                             <div className="box__content-text">

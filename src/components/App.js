@@ -6,8 +6,11 @@ import {
   Link
 } from 'react-router-dom';
 
+
+
 import Menu from './Menu';
 import Footer from './Footer';
+import ScrollToTop from './ScrollToTop';
 import Scholars from './Scholars';
 import Calendar from './Calendar';
 import Contact from './Contact';
@@ -34,20 +37,22 @@ class App extends Component {
   render() {
     return(
       <Router>
-        <div>
-          <Menu isLanding={this.state.isLanding} />
-            <Route 
-              exact path="/" 
-              component={Landing}               
-              onLoad={this.setLanding.bind(this)}
-            />
-            <Route path="/3sp" component={Scholars} />
-            <Route path="/contact" component={Contact} />        
-            <Route path="/calendar" component={Calendar} />
-            <Route path="/benefits" component={Benefits} />
-            <Route path="/blog" component={Blog} />
-          <Footer />
-        </div>
+        <ScrollToTop>
+          <div>
+            <Menu isLanding={this.state.isLanding} />
+              <Route 
+                exact path="/" 
+                component={Landing}               
+                onLoad={this.setLanding.bind(this)}
+              />
+              <Route path="/3sp" component={Scholars} />
+              <Route path="/contact" component={Contact} />        
+              <Route path="/calendar" component={Calendar} />
+              <Route path="/benefits" component={Benefits} />
+              <Route path="/blog" component={Blog} />
+            <Footer />
+          </div>
+        </ScrollToTop>
       </Router>
     );
   }  
