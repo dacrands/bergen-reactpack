@@ -28,9 +28,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
+    padding: 0 20px;
     /* box-shadow: 0 0 4px rgba(0, 0, 0, 0.3); */
 
+}
+
+.header h1 {
+  padding-top: 30px;
 }
 
 .header--hide {
@@ -39,6 +43,6 @@
 
 @media(max-width:1200px) {
   .header {
-    font-size: 3vw;
+    font-size: 5vw;
   }
 }

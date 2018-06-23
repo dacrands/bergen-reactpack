@@ -12,34 +12,31 @@ class Menu extends Component {
         super(props);
         this.state = {
             mobileMenu: false,
-            menuHeight: 50,
             logoWidth: 60
         }        
     }
 
     componentDidMount() {
         this.setState({ 
-            menuHeight: this.refs.menu.clientHeight,
             logoWidth: this.refs.logo.clientWidth
         });
 
-        if (window.innerWidth <= 768) {
-            this.refs.menu.classList.remove('menu__landing');
-        }
+        // if (window.innerWidth <= 768) {
+        //     this.refs.menu.classList.remove('menu__landing');          
+        // }
         
-        window.addEventListener('resize', () => {
-            if (window.innerWidth <= 768) {
-                this.refs.menu.classList.remove('menu__landing');
-                this.setState({ menuHeight: this.refs.menu.clientHeight });
-            };
-        });
+        // window.addEventListener('resize', () => {
+        //     if (window.innerWidth <= 768) {
+        //         this.refs.menu.classList.remove('menu__landing');
+        //     };
+        // });
 
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 1) {
-                return this.refs.menu.classList.remove('menu__landing');
-            }            
-            return this.refs.menu.classList.add('menu__landing');
-        });
+        // window.addEventListener('scroll', () => {
+        //     if (window.scrollY > 1) {
+        //         return this.refs.menu.classList.remove('menu__landing');
+        //     }            
+        //     return this.refs.menu.classList.add('menu__landing');
+        // });
     }
 
     toggleMenu() {
@@ -58,14 +55,22 @@ class Menu extends Component {
                 patty.classList.toggle(`patty--collapse-${numTwo}`);
             });
         }
-
         this.setState({ mobileMenu: !pattyListBool });
         orderPatties(pattyList, pattyListBool);
     }
 
+    setPadding() {
+        if (window.innerWidth <= 768) {
+            return 0;
+        }
+
+        return this.state.logoWidth;
+
+    }
+
     render() {
         return (
-            <nav className={this.props.isLanding ? "menu" : "menu menu__landing"} ref="menu">
+            <nav className={this.props.isLanding ? "menu" : "menu"} ref="menu">
                 <div className="menu__logo" ref="logo">
                     <NavLink
                         exact
@@ -73,7 +78,8 @@ class Menu extends Component {
                         className="menu__link"
                         activeClassName='menu__link--active'
                     >
-                        &#10092;STEM&#10093;
+                        {/* &#10092;STEM&#10093; */}
+                        STEM
                         {/* &infin;	 */}
                         {/* <Logo width={60} height={40} /> */}
 
@@ -82,7 +88,7 @@ class Menu extends Component {
                 </div>
                 <ul
                     className={this.state.mobileMenu ? "menu__list menu__list--show" : "menu__list"}
-                    style={{ top: `${this.state.menuHeight}px`, paddingRight: `${this.state.logoWidth}px` }}
+                    style={{ paddingRight: `${this.setPadding.bind(this)}px` }}
                 >
                     <li className="menu__list-item">
                         <NavLink
@@ -123,7 +129,7 @@ class Menu extends Component {
                     </li>                    
                     <li className="menu__list-item" id="dropdown">
                         <button
-                            className="menu__list-link menu__button"
+                            className="menu__button menu__list-link"
                             id="dropdownButton"                            
                         >
                             Resources&#x25BE;

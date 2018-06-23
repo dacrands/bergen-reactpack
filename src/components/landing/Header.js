@@ -18,7 +18,7 @@ class Header extends Component{
       <header className="landing__header" id="landingHeader">
         <div className="overlay">
           Bergen STEM
-        </div>
+         </div>        
         <canvas id="myCanvas"></canvas>
       </header>
     )

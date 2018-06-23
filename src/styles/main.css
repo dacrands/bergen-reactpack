@@ -8,10 +8,11 @@
     --comp: #FFDF77; */
 
     --primary-dark: #1a075ee6;
-    --primary-dark: hsl(253, 100%, 23%);
+    --primary-dark-bg: hsl(253, 100%, 23%);
     --primary: #3f19c7f1;
-    --primary: hsl(253, 100%, 50%);
+    --primary-bg: hsl(253, 100%, 50%);
     --primary-light: #3e1fadf1;
+    --primary-light-bg: hsl(253, 100%, 40%);
     --light: #f1f1f1;
     --dark: #424040;
     --comp: #FFD513;
@@ -38,6 +39,7 @@ a:visited:active{
 
 p {
     color: var(--dark);
+    line-height: 130%;
 }
 
 .lead {
