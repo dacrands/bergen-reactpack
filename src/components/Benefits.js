@@ -15,7 +15,7 @@ class Benefits extends Component {
             <div>
                 <Header title="STEM at BCC" />
                 <div className="container">
-                    <div className="title">
+                    {/* <div className="title">
                         <h1>What is STEM?</h1>
                         <hr className="hr" />
                     </div>
@@ -35,9 +35,9 @@ class Benefits extends Component {
                                     <li><a href=""></a></li>
                                 </ul>
                             
-                        </div>
-                    {/* BOX */}
-                    </div>
+                        </div> 
+                    
+                    </div>*/}
 
                     <div className="title">
                         <h1>Why study STEM at Bergen?</h1>

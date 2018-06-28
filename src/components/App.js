@@ -10,6 +10,7 @@ import {
 
 import Menu from './Menu';
 import Footer from './Footer';
+import Login from './Login';
 import ScrollToTop from './ScrollToTop';
 import Scholars from './Scholars';
 import Calendar from './Calendar';
@@ -50,6 +51,7 @@ class App extends Component {
               <Route path="/calendar" component={Calendar} />
               <Route path="/benefits" component={Benefits} />
               <Route path="/blog" component={Blog} />
+              <Route path="/login" component={Login} />
             <Footer />
           </div>
         </ScrollToTop>

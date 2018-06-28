@@ -16,35 +16,75 @@ class MyCalendar extends Component {
         this.state = {
             events: [
                 {
-                  start: new Date(),
-                  end: new Date(moment().add(3, "days")),
-                  title: "STEM Summit"
+                  start: new Date(2018, 7, 21),
+                  end: new Date(2018, 7, 25),
+                  title: "Running Start Program"
                 },
                 {
-                  start: new Date(2018, 5, 18, 13, 0, 0),
-                  end: new Date(2018, 5, 18, 14, 0, 0),
-                  title: "meeting"
+                    start: new Date(2018, 7, 9, 13, 0, 0),
+                    end: new Date(2018, 7, 9, 15, 0, 0),                  
+                    title: "Mini STEM Research Conference"
                 },
                 {
-                  start: new Date(2018, 5, 1, 0, 0, 0),
-                  end: new Date(2018, 5, 0, 0, 0, 0),
-                  title: "Running Start"
+                  start: new Date(2018, 7, 21, 9, 0, 0),
+                  end: new Date(2018, 7, 21, 12, 0, 0),
+                  title: "Intermediate Algebra - MAT-160 (Room C-316)"
                 },
                 {
-                  start: new Date(2018, 5, 12, 9, 0, 0),
-                  end: new Date(2018, 5, 12, 10, 30, 0),
-                  title: "We gotta do this"
+                  start: new Date(2018, 7, 22, 9, 0, 0),
+                  end: new Date(2018, 7, 22, 12, 0, 0),
+                  title: "Intermediate Algebra - MAT-160 (Room C-316)"
                 },
                 {
-                  start: new Date(2018, 5, 12, 11, 0, 0),
-                  end: new Date(2018, 5, 12, 12, 0, 0),
-                  title: "Something else"
+                  start: new Date(2018, 7, 23, 9, 0, 0),
+                  end: new Date(2018, 7, 23, 12, 0, 0),
+                  title: "Intermediate Algebra - MAT-160 (Room C-316)"
                 },
                 {
-                  start: new Date(2018, 5, 12, 15, 0, 0),
-                  end: new Date(2018, 5, 12, 16, 0, 0),
-                  title: "Another one"
+                  start: new Date(2018, 7, 24, 9, 0, 0),
+                  end: new Date(2018, 7, 24, 12, 0, 0),
+                  title: "Intermediate Algebra - MAT-160 (Room C-316)"
+                },                
+                {
+                  start: new Date(2018, 7, 21, 13, 0, 0),
+                  end: new Date(2018, 7, 21, 16, 0, 0),
+                  title: "Pre-Calculus - MAT-180 (Room C-314)"
                 },
+                {
+                  start: new Date(2018, 7, 22, 13, 0, 0),
+                  end: new Date(2018, 7, 22, 16, 0, 0),
+                  title: "Pre-Calculus - MAT-180 (Room C-314)"
+                },
+                {
+                  start: new Date(2018, 7, 23, 13, 0, 0),
+                  end: new Date(2018, 7, 23, 16, 0, 0),
+                  title: "Pre-Calculus - MAT-180 (Room C-314)"
+                },
+                {
+                  start: new Date(2018, 7, 24, 13, 0, 0),
+                  end: new Date(2018, 7, 24, 16, 0, 0),
+                  title: "Pre-Calculus - MAT-180 (Room C-314)"
+                },                
+                {
+                  start: new Date(2018, 7, 21, 13, 0, 0),
+                  end: new Date(2018, 7, 21, 15, 0, 0),
+                  title: "Introduction to Chemistry - CHM-100 (Room C-316)"
+                },
+                {
+                  start: new Date(2018, 7, 22, 13, 0, 0),
+                  end: new Date(2018, 7, 22, 15, 0, 0),
+                  title: "Introduction to Chemistry - CHM-100 (Room C-316)"
+                },
+                {
+                  start: new Date(2018, 7, 23, 13, 0, 0),
+                  end: new Date(2018, 7, 23, 15, 0, 0),
+                  title: "Introduction to Chemistry - CHM-100 (Room C-316)"
+                },
+                {
+                  start: new Date(2018, 7, 24, 13, 0, 0),
+                  end: new Date(2018, 7, 24, 15, 0, 0),
+                  title: "Introduction to Chemistry - CHM-100 (Room C-316)"
+                },                
             ],
             month: 0,
             day: 0,
@@ -93,7 +133,7 @@ class MyCalendar extends Component {
                         defaultView="month"
                         events={this.state.events}
                         style={{ height: "100vh" }}
-                        onSelectEvent={event => alert(event.title)}
+                        onSelectEvent={event => alert(`${event.title} \n START: ${event.start} \n END: ${event.end}`)}
                         scrollToTime={new Date(1970, 1, 1, 6)}                        
                     />
 
@@ -126,29 +166,18 @@ class MyCalendar extends Component {
                             <label className={"form__item"} htmlFor="day">
                                 Day
                                 <select className={"form__item"} name="day" id="" onChange={this.handleDayChange.bind(this)}>
-                                    <option value="0">1</option>
-                                    <option value="1">2</option>
-                                    <option value="2">3</option>
-                                    <option value="3">4</option>
-                                    <option value="4">5</option>
-                                    <option value="5">6</option>
-                                    <option value="6">7</option>
-                                    <option value="7">8</option>
-                                    <option value="8">9</option>
-                                    <option value="9">10</option>
-                                    <option value="10">11</option>
-                                    <option value="11">12</option>
-                                    <option value="12">13</option>
-                                    <option value="13">14</option>
-                                    <option value="14">15</option>
-                                    <option value="15">16</option>
+                                    {
+                                        [...Array(31)].map((i, x) => {
+                                            return <option key={i+1}> {x+1} </option>
+                                        })
+                                    }
                                 </select>
                             </label>
                             <label htmlFor="hour" className="form__item">
                                 Hour
                                 <select name="hour" id="" className="form__item">
-                                    <option value="0">12 AM</option>
-                                    <option value="1">1 AM</option>
+                                    <option value="0">8 AM</option>
+                                    <option value="1">9 AM</option>
                                     <option value="2">2 AM</option>
                                     <option value="3">3 AM</option>
                                     <option value="4">4 AM</option>
@@ -159,12 +188,9 @@ class MyCalendar extends Component {
                             <label htmlFor="hour" className="form__item">
                                 Minute
                                 <select name="hour" id="" className="form__item">
-                                    <option value="0">0</option>
-                                    <option value="5">5</option>
-                                    <option value="10">10</option>
-                                    <option value="15">15</option>
-                                    <option value="30">30</option>                                    
-                                    <option value="45">45</option>                                    
+                                    {[0,5,10,15,30,45].map((i, x) => {
+                                        return <option key={i} value={i}>{i}</option>
+                                    })}                                                                       
                                 </select>
                             </label>
                         </div>  

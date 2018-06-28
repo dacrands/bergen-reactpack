@@ -8,13 +8,14 @@
 .title {
     padding: 0 2%;
     color: var(--primary-light);
-    font-size: 1.6rem;
+    font-size: 1.9rem;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .title h1 {
     margin-bottom: 0;
+    font-weight: 100;
 }
 
 .box {
@@ -67,7 +68,7 @@
 @media (max-width:768px) {
 
     .title {
-        font-size: 1.3rem;
+        font-size: 1.6rem;
     }
     .box {
         grid-template-columns: repeat( auto-fill, minmax(97%, 1fr) );
