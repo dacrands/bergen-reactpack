@@ -18,7 +18,7 @@ class MyCalendar extends Component {
                 {
                   start: new Date(2018, 7, 21),
                   end: new Date(2018, 7, 25),
-                  title: "Running Start Program"
+                  title: "Running Start Program BOOT CAMPS"
                 },
                 {
                     start: new Date(2018, 7, 9, 13, 0, 0),
