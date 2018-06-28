@@ -93,11 +93,11 @@ class Content extends Component {
                                 Listen to BCC students discuss their
                                 experiences in the STEM program. 
                             </h3>
-                            <p>
+                            {/* <p>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, quo id culpa perferendis explicabo recusandae rem inventore 
                                 fugiat assumenda veniam necessitatibus totam tempora beatae. 
                                 Earum consequatur dolorum itaque non rerum quam suscipit tempora minima modi nihil repellendus, unde nisi similique?
-                            </p>
+                            </p> */}
                         </div>
                     </div>                                     
                 </div>
@@ -108,11 +108,11 @@ class Content extends Component {
                         <div className="content__text">
                             <h1>Interested in research?</h1>
                             <h3>Sign up for our newsletter!</h3>
-                            <p>
+                            {/* <p>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                                 Maxime error voluptatibus unde cumque autem vitae praesentium. 
                                 Voluptatum cupiditate dolor vitae?
-                            </p>                    
+                            </p>                     */}
                         </div>
 
                         <div className="content__form">
