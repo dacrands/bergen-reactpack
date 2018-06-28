@@ -15,7 +15,7 @@ class Footer extends Component {
                     <p>Room: S-315</p>
                 </div>
                 <div className="footer__item">
-                    <p className="lead">Links</p>
+                    <p className="lead">Resources</p>
                     <a className="footer__item-link" href="">Bergen Community College</a>
                     <a className="footer__item-link" href="">Running Start</a>
                     <a className="footer__item-link" href="">STEM Summit</a>

@@ -75,7 +75,7 @@ class Menu extends Component {
                     <NavLink
                         exact
                         to="/"                        
-                        className="menu__link"
+                        className="menu__logo-link"
                         activeClassName='menu__link--active'
                     >
                         {/* &#10092;STEM&#10093; */}
@@ -94,7 +94,7 @@ class Menu extends Component {
                         <NavLink
                             exact
                             to="/benefits"
-                            className="menu__list-link"
+                            className="menu__link"
                             activeClassName='menu__link--active'
                         >
                             About
@@ -103,7 +103,7 @@ class Menu extends Component {
                     <li className="menu__list-item">
                         <NavLink
                             to="/3sp"
-                            className="menu__list-link"
+                            className="menu__link"
                             activeClassName='menu__link--active'
                         >
                             3SP
@@ -112,7 +112,7 @@ class Menu extends Component {
                     <li className="menu__list-item">
                         <NavLink
                             to="/calendar"
-                            className="menu__list-link"
+                            className="menu__link"
                             activeClassName='menu__link--active'
                         >
                             Events
@@ -121,7 +121,7 @@ class Menu extends Component {
                     <li className="menu__list-item">
                         <NavLink
                             to="/contact"
-                            className="menu__list-link"
+                            className="menu__link"
                             activeClassName='menu__link--active'
                         >
                             Contact
@@ -129,7 +129,7 @@ class Menu extends Component {
                     </li>                    
                     <li className="menu__list-item" id="dropdown">
                         <button
-                            className="menu__button menu__list-link"
+                            className="menu__button menu__link"
                             id="dropdownButton"                            
                         >
                             Resources&#x25BE;
@@ -147,7 +147,7 @@ class Menu extends Component {
                             </li>
                             {/* <li className="menu__dropdown-item">
                                 <Link
-                                    className="menu__list-link"
+                                    className="menu__link"
                                     to="/calendar"
 
                                 >

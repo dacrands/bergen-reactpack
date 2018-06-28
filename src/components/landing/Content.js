@@ -88,9 +88,10 @@ class Content extends Component {
                             <Video className="shadow"/>
                         </div>
                         <div className="content__text">
-                            <h1>Listen to students talk STEM</h1>
+                            <h1>Students talk STEM</h1>
                             <h3>
-                                Enjoy the stuff
+                                Listen to BCC students discuss their
+                                experiences in the STEM program. 
                             </h3>
                             <p>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, quo id culpa perferendis explicabo recusandae rem inventore 
@@ -106,7 +107,7 @@ class Content extends Component {
                     <div className="content">
                         <div className="content__text">
                             <h1>Interested in research?</h1>
-                            <h3>So are we...</h3>
+                            <h3>Sign up for our newsletter!</h3>
                             <p>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                                 Maxime error voluptatibus unde cumque autem vitae praesentium. 
