@@ -19,7 +19,7 @@ class About extends Component {
                     ============ */}
                         <div className="box__content">
                             <div className="box__content-title">
-                                <h1>Benefits</h1>
+                                <h2>Benefits</h2>
                             </div>
                             <div className="box__content-text">            
                                 <p>
@@ -33,7 +33,7 @@ class About extends Component {
                         
                         <div className="box__content">
                             <div className="box__content-title">
-                                <h1>Purpose</h1>
+                                <h2>Purpose</h2>
                             </div>
                             <div className="box__content-text">
                                 <p>
@@ -47,7 +47,7 @@ class About extends Component {
                                 
                         <div className="box__content">
                             <div className="box__content-title">
-                                <h1>KSA Learning</h1>
+                                <h2>KSA Learning</h2>
                             </div>
                             <div className="box__content-text">
                                 <h3>Knowledge</h3>
@@ -71,7 +71,7 @@ class About extends Component {
 
                         <div className="box__content">
                             <div className="box__content-title">
-                                <h1>Program Elements</h1>
+                                <h2>Program Elements</h2>
                             </div>
                             <div className="box__content-text">
                                 <ul>
@@ -97,7 +97,7 @@ class About extends Component {
                     <div className="box box--block">
                         <div className="box__content">
                             <div className="box__content-title">
-                                <h1>Eligibility Requirements</h1>
+                                <h2>Eligibility Requirements</h2>
                             </div>
                             <div className="box__content-text">                            
                                 <ol>
@@ -112,7 +112,7 @@ class About extends Component {
 
                         <div className="box__content">
                             <div className="box__content-title">
-                                <h1>Admission Requirements</h1>
+                                <h2>Admission Requirements</h2>
                             </div>
                             <div className="box__content-text">                            
                                 <ol>
@@ -127,7 +127,7 @@ class About extends Component {
 
                         <div className="box__content">
                             <div className="box__content-title">
-                                <h1>Ongoing Requirements to remain in good standing</h1>
+                                <h2>Ongoing Requirements to remain in good standing</h2>
                             </div>
                             <div className="box__content-text">                            
                                 <ol>
@@ -152,10 +152,10 @@ class About extends Component {
                     <div className="box">
                         <div className="box__content">
                             <div className="box__content-title">
-                                <h1>Research elements</h1>
+                                <h2>Research elements</h2>
                             </div>
                             <div className="box__content-text"> 
-                                <h3>Students of the Program must participate in:</h3>                           
+                                <h4>Students of the Program must participate in:</h4>                           
                                 <ol>
                                     <li>On-campus faculty-mentored internship project in their first summer of the program.</li>
                                     <li>Off-campus internship project in their second summer of the program.</li>
@@ -166,8 +166,8 @@ class About extends Component {
                         </div> {/* box__content */}
                         <div className="box__content">
                             <div className="box__content-title">
-                                <h1>Additional Research elements</h1>
-                                <h3>*Determined by 3SP Faculty Research Mentors</h3>
+                                <h2>Additional Research elements</h2>
+                                <h4>*Determined by 3SP Faculty Research Mentors</h4>
                             </div>
                             <div className="box__content-text">                          
                                 <ol>
