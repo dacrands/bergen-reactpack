@@ -137,7 +137,7 @@ class MyCalendar extends Component {
                         scrollToTime={new Date(1970, 1, 1, 6)}                        
                     />
 
-                    <form className={"form__container"} onSubmit={this.handleSubmit.bind(this)}>
+                    {/* <form className={"form__container"} onSubmit={this.handleSubmit.bind(this)}>
                         <div className="title">
                             <h1>Make an event</h1>
                         </div>
@@ -196,7 +196,7 @@ class MyCalendar extends Component {
                         </div>  
                                                                  
                         <input className={"form__button"} type="submit" value="Submit" />
-                    </form>
+                    </form> */}
                 </div>
             </div>
         )
