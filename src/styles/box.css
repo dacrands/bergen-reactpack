@@ -8,7 +8,7 @@
 .title {
     padding: 0 2%;
     color: var(--primary-light);
-    font-size: 1.9rem;
+    font-size: 1.4rem;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -75,7 +75,7 @@
 @media (max-width:768px) {
 
     .title {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
     }
     .box {
         grid-template-columns: repeat( auto-fill, minmax(97%, 1fr) );

@@ -13,7 +13,8 @@ class Menu extends Component {
         this.state = {
             mobileMenu: false,
             logoWidth: 60
-        }        
+        }
+        this.toggleMenu = this.toggleMenu.bind(this);   
     }
 
     componentDidMount() {
@@ -63,9 +64,7 @@ class Menu extends Component {
         if (window.innerWidth <= 768) {
             return 0;
         }
-
         return this.state.logoWidth;
-
     }
 
     render() {
@@ -73,17 +72,13 @@ class Menu extends Component {
             <nav className={this.props.isLanding ? "menu" : "menu"} ref="menu">
                 <div className="menu__logo" ref="logo">
                     <NavLink
+                        onClick={this.toggleMenu}
                         exact
                         to="/"                        
                         className="menu__logo-link"
                         activeClassName='menu__link--active'
-                    >
-                        {/* &#10092;STEM&#10093; */}
-                        STEM
-                        {/* &infin;	 */}
-                        {/* <Logo width={60} height={40} /> */}
-
-                        
+                    >                        
+                        STEM                        
                     </NavLink>
                 </div>
                 <ul
@@ -92,9 +87,11 @@ class Menu extends Component {
                 >
                     <li className="menu__list-item">
                         <NavLink
+                            onClick={this.toggleMenu}
                             exact
                             to="/benefits"
                             className="menu__link"
+                            
                             activeClassName='menu__link--active'
                         >
                             About
@@ -102,6 +99,7 @@ class Menu extends Component {
                     </li>
                     <li className="menu__list-item">
                         <NavLink
+                            onClick={this.toggleMenu}
                             to="/3sp"
                             className="menu__link"
                             activeClassName='menu__link--active'
@@ -111,6 +109,7 @@ class Menu extends Component {
                     </li>
                     <li className="menu__list-item">
                         <NavLink
+                            onClick={this.toggleMenu}
                             to="/calendar"
                             className="menu__link"
                             activeClassName='menu__link--active'
@@ -120,6 +119,7 @@ class Menu extends Component {
                     </li>
                     <li className="menu__list-item">
                         <NavLink
+                            onClick={this.toggleMenu}
                             to="/contact"
                             className="menu__link"
                             activeClassName='menu__link--active'
@@ -137,9 +137,9 @@ class Menu extends Component {
                         <ul className="menu__dropdown shadow">
                             <li className="menu__dropdown-item">
                                 <Link
+                                    onClick={this.toggleMenu}                                    
                                     className="menu__dropdown-link"
-                                    to="/3sp"
-
+                                    to="/3sp"                                    
                                 >
                                     STEM Student Scholars
                                 </Link>
@@ -178,7 +178,7 @@ class Menu extends Component {
                     <button
                         className="menu__button"
                         aria-label="menu button"
-                        onClick={this.toggleMenu.bind(this)}>
+                        onClick={this.toggleMenu}>
                         <div ref="patties" className="patties">
                             <div className="patty"></div>
                             <div className="patty"></div>

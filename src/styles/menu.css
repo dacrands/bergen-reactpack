@@ -1,4 +1,3 @@
-
 .menu {
     /* outline: 4px dashed black;     */
     top :0;
@@ -7,10 +6,10 @@
     width: 100%;    
     display: grid;        
     grid-template-columns: min-content 1fr;
+    padding: 0 1vw;
     background: var(--primary-dark);
     transition: all 250ms ease-in;
 }
-
 
 /* =============
 MENU LANDING
@@ -42,7 +41,7 @@ MENU LANDING
     margin-left: 3px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     font-size: 1.5rem;
     font-weight: bold;
     color: var(--light);
@@ -52,14 +51,19 @@ MENU LANDING
     /* outline: 4px solid salmon; */
     height: 100%;
     margin: 0 auto;
-    padding: 0;
+    
     width: 100%;
-    max-width: 1500px;
+    /* max-width: 1000px; */
     display: flex;
     list-style: none;
-    justify-content: space-around;
+    /* justify-content: space-around; */
+    justify-content: flex-end;
     align-items: center;    
     color: var(--light);
+}
+
+.menu__list-item {
+    margin: 0 2vw;
 }
 
 .menu__link,
@@ -129,7 +133,7 @@ MENU DROPDOWN
     visibility: hidden;
     opacity: 0;
     transition: all 0.5s ease;
-    display: none;    
+    border: 1px solid #636060;
 }
 
 .menu__dropdown-link {
@@ -176,7 +180,7 @@ MENU BURGER
 }
 
 .patty {
-    height: .08rem;
+    height:1px;
     width: 30px;
     margin: 5px 0;
     background: var(--light);
@@ -185,7 +189,7 @@ MENU BURGER
 }
 
 .patty--collapse-1 {
-    margin: -.08rem 0;    
+    margin: -1px 0;    
 }
 
 .patty--collapse-1:first-of-type {  
@@ -193,8 +197,9 @@ MENU BURGER
 }
 
 .patty--collapse-2 {
-    background: red;
+    background: hsl(2, 100%, 50%);
     transform: rotate(-45deg);
+    box-shadow: 0 0 1px red;
 }
 
 .patty--collapse-2:first-of-type {  
