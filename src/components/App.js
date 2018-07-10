@@ -18,6 +18,7 @@ import Contact from './Contact';
 import Benefits from './Benefits';
 import Landing from './landing/Landing';
 import Blog from './projects/Blog';
+import Projects from './projects/index';
 
 
 
@@ -50,7 +51,7 @@ class App extends Component {
               <Route path="/contact" component={Contact} />        
               <Route path="/calendar" component={Calendar} />
               <Route path="/benefits" component={Benefits} />
-              <Route path="/blog" component={Blog} />
+              <Route path="/projects" component={Projects} />
               <Route path="/login" component={Login} />
             <Footer />
           </div>
