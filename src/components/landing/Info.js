@@ -11,21 +11,21 @@ class Info extends Component{
           Title: "About",
           Accent: "\u24D8",
           Desc: "At Bergen Community College, our mission is to provide our STEM students with the skills essential to success at 4-year institutions and beyond.",
-          LinkText: "Learn More",
+          LinkText: "Learn More\u25B8",
           Link: "#"
         },
         {
           Title: "Research",
           Accent: "\u2699",
           Desc: "From rockets to algae biodiesel, Bergen Community college offers STEM students a wide variety of research opportunities.",
-          LinkText: "Student Projects",
+          LinkText: "Student Projects\u25B8",
           Link: "Projects"
         }, 
         {
           Title: "Join STEM",
           Accent: "\u2A1D",
           Desc: "Learn some of the benefits of pursuing a career in Science, Technology, Engineering, and Mathematics. ",
-          LinkText: "Benefits of STEM",
+          LinkText: "Benefits of STEM\u25B8",
           Link: "benefits"
         }
       ]

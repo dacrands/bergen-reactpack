@@ -15,7 +15,7 @@ class Content extends Component {
     render() {
         return (
             <div>
-                <div className="content--light">
+                <div className="content--med">
                 {/* CONTENT */}
                     <div className="content">
                         <div className="content__img img--loader">
@@ -45,12 +45,12 @@ class Content extends Component {
                                 proficiency exam after completing the boot camp and possibly
                                 test out of the course.
                             </p>
-                            <a href="https://bergen.edu/faculty-staff/grants-administration/awards/stem/running-start-program/">Running Start Program</a>
+                            <a href="https://bergen.edu/faculty-staff/grants-administration/awards/stem/running-start-program/">Running Start Program{'\u25B8'}</a>
                         </div>                        
                     </div>                                    
                 </div>
                 {/* CONTENT */}
-                <div className="content--med">
+                <div className="">
                     <div className="content">                                            
                         <div className="content__img img--loader">
                             <FadeIn height={500}>
@@ -76,13 +76,13 @@ class Content extends Component {
                                 to ensure their success in securing research internships and successful
                                 transfer to their targeted 4-year institution.
                             </p>
-                            <Link to="/3sp">Learn More</Link>
+                            <Link to="/3sp">Learn More{'\u25B8'}</Link>
                         </div>
                     </div>
                 </div>                                                                                   
 
                 {/* CONTENT */}
-                <div className="content--dark">
+                <div className="content--med">
                     <div className="content content-video">                                                
                         <div className="content__video">
                             <Video className="shadow"/>

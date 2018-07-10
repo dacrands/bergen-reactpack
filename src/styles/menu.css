@@ -1,7 +1,7 @@
 .menu {
-    /* outline: 4px dashed black;     */
-    top :0;
+    /* outline: 4px dashed black;     */    
     position: fixed;
+    top :0;
     z-index: 9;
     width: 100%;    
     display: grid;        
@@ -11,65 +11,51 @@
     transition: all 250ms ease-in;
 }
 
-/* =============
-MENU LANDING
-============= */
-/* .menu__landing {
-    background: none;
-    padding-top: 10px;
-} */
-
-/* .menu__landing 
-.menu__list-item 
-.menu__list-link{
-    outline: 3px dashed black;    
-    margin-top: 5px;
-    padding-bottom: 5px;
-    border-bottom: 2px solid transparent;
-} */
-
-/* .menu__landing 
-.menu__list-item 
-.menu__list-link:hover {
-    color: var(--light);    
-    border-bottom: 2px solid var(--comp);
-    transition: none;
-} */
-
+/* ----------------------------------
+Bigger font size, greater weight
+for logo text -- temp visual holder
+until loogo
+---------------------------------- */
 .menu__logo {
-    /*   outline: 3px solid lime; */
-    margin-left: 3px;
+    /*   outline: 3px solid lime; */    
     display: flex;
     align-items: center;
-    /* justify-content: center; */
+    margin-left: 3px;    
     font-size: 1.5rem;
     font-weight: bold;
     color: var(--light);
 }
 
+/* ----------------------------------
+Send the lis to the end menu ul
+---------------------------------- */
 .menu__list {
     /* outline: 4px solid salmon; */
     height: 100%;
-    margin: 0 auto;
-    
-    width: 100%;
-    /* max-width: 1000px; */
+    width: 100%;        
     display: flex;
-    list-style: none;
-    /* justify-content: space-around; */
+    margin: 0 auto;                
     justify-content: flex-end;
-    align-items: center;    
+    align-items: center;   
+    list-style: none; 
     color: var(--light);
 }
 
+/* ----------------------------------
+Spacing between li in the menu ul
+---------------------------------- */
 .menu__list-item {
     margin: 0 2vw;
 }
 
+/* ----------------------------------
+.menu links get some padding for mobile.
+Transition for color change.
+---------------------------------- */
 .menu__link,
 .menu__logo-link,
 .menu__button {
-/*   outline: 2px solid green;   */    
+    /* outline: 2px solid green;     */
     /* height: 100%; */
     padding: 5px;    
     color: var(--light);
@@ -85,19 +71,19 @@ MENU LANDING
 .menu__logo .menu__link--active,
 .menu__list .menu__link--active {
     color: var(--comp);
-    /* color: #ffffff;
-    text-shadow: 0 0 0.5px #ffffff */
 }
 
 .menu__link--active:hover {
     color: var(--comp);
 }
 
+/* ----------------------------------
+Button used for resource dropdown.
+Remove default styles
+---------------------------------- */
 .menu__button {
     border: none;
-    background: inherit;
-    color: inherit;
-    font-family: inherit;
+    background: inherit;    
     font-size: inherit;
 }
 
@@ -105,9 +91,6 @@ MENU LANDING
     outline: none;
 }
 
-.menu__button:hover {
-    cursor: pointer;
-}
 
 /* =============
 MENU DROPDOWN
@@ -120,15 +103,12 @@ MENU DROPDOWN
     /*   outline: 3px dashed black; */
     display: none;  
     position: absolute;
-    right: 0;
-    /* top: 30px; */
+    right: 0;    
     margin-left: min-content;
     padding: 10px;
     color: blue;
-/*   margin-top: 20px; */
     box-shadow: 0 0 2px var(--shadow);
-    background: #ffffff;
-    /* text-align: center; */
+    background: #ffffff;    
     list-style: none;
     visibility: hidden;
     opacity: 0;
@@ -149,10 +129,10 @@ MENU DROPDOWN
 }
 
 .menu__list-item:hover > .menu__dropdown,
-.menu__dropdown:hover {
-    visibility: visible;
-    opacity: 1;
+.menu__dropdown:hover {    
+    visibility: visible;    
     display: block;
+    opacity: 1;
 }
 
 .menu__dropdown 
@@ -210,7 +190,6 @@ MENU BURGER
 MENU MEDIA
 ============= */
 @media (max-width: 768px) {
-
     .menu {
         display: flex;
         justify-content: space-between;
@@ -286,3 +265,30 @@ MENU MEDIA
     }
 
 }
+
+
+
+/* =============
+MENU LANDING
+============= */
+/* .menu__landing {
+    background: none;
+    padding-top: 10px;
+} */
+
+/* .menu__landing 
+.menu__list-item 
+.menu__list-link{
+    outline: 3px dashed black;    
+    margin-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+} */
+
+/* .menu__landing 
+.menu__list-item 
+.menu__list-link:hover {
+    color: var(--light);    
+    border-bottom: 2px solid var(--comp);
+    transition: none;
+} */

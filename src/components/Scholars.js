@@ -49,7 +49,28 @@ class About extends Component {
                             <div className="box__content-title">
                                 <h2>KSA Learning</h2>
                             </div>
-                            <div className="box__content-text">
+
+                           
+                                <h3>Knowledge</h3>
+                                    <ul>
+                                        <li>Understandning principles
+                                    related to a particular subject</li>
+                                    </ul>
+                            
+                                <h3>Skills</h3>
+                                    <ul>
+                                        <li>How to use something or
+                                    perform a particular task</li>
+                                    </ul>
+                                
+                                <h3>Abilitty</h3>
+                                    <ul>
+                                        <li>Understandning principles
+                                    related to a particular subject</li>
+                                    </ul>
+                            
+               
+                            {/* <div className="box__content-text">
                                 <h3>Knowledge</h3>
                                 <p>Understandning principles
                                     related to a particular subject
@@ -66,7 +87,7 @@ class About extends Component {
                                 <p>Understandning principles
                                     related to a particular subject
                                 </p>
-                            </div>
+                            </div> */}
                         </div>
 
                         <div className="box__content">

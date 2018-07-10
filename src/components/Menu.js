@@ -72,7 +72,13 @@ class Menu extends Component {
             <nav className={this.props.isLanding ? "menu" : "menu"} ref="menu">
                 <div className="menu__logo" ref="logo">
                     <NavLink
-                        onClick={this.toggleMenu}
+                        // onClick={
+                        //     () => {
+                        //         if (pattyList[0].classList.contains('patty--collapse-1')) {
+                        //             this.toggleMenu
+                        //         }                                
+                        //     }
+                        // }
                         exact
                         to="/"                        
                         className="menu__logo-link"
