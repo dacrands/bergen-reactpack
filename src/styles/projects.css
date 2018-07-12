@@ -1,0 +1,38 @@
+.projects {
+    padding: 1em;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-auto-rows: 350px;
+    grid-gap: 20px;
+}
+
+.project {
+    position: relative;
+    /* background: rgb(23, 22, 24); */
+    background: #000;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    /* border: 1px solid #222; */
+    border-radius: 5px;
+}
+
+.project--overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.7);
+    transform: translateX(100%);
+    transition: all 200ms ease;
+    padding: 1em;
+}
+
+.project:hover .project--overlay{
+    transform: translateX(0);
+}

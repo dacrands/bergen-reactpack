@@ -17,8 +17,8 @@ import Calendar from './Calendar';
 import Contact from './Contact';
 import Benefits from './Benefits';
 import Landing from './landing/Landing';
-import Blog from './projects/Blog';
 import Projects from './projects/index';
+import Project from './projects/Project';
 
 
 
@@ -26,13 +26,25 @@ class App extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { isLanding: false };        
+    this.state = { 
+      isLanding: false,
+      currProject: '235'
+    };        
+
+    this.getProjectId = this.getProjectId.bind(this);
   }
 
   setLanding() {
     this.state.isLanding
     ? this.setState({ isLanding:false })
     : this.setState({ isLanding:true })
+  }
+
+  getProjectId(id) {
+    console.log('inside')
+    this.setState({
+      currProject: id
+    })
   }
 
 
@@ -51,7 +63,8 @@ class App extends Component {
               <Route path="/contact" component={Contact} />        
               <Route path="/calendar" component={Calendar} />
               <Route path="/benefits" component={Benefits} />
-              <Route path="/projects" component={Projects} />
+              <Route exact path="/projects" component={Projects} />
+              <Route path={`/projects/${this.state.currProject}`} render={() => <Project id={this.state.currProject} getId={this.getProjectId} />} />
               <Route path="/login" component={Login} />
             <Footer />
           </div>
