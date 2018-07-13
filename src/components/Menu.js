@@ -116,11 +116,11 @@ class Menu extends Component {
                     <li className="menu__list-item">
                         <NavLink
                             onClick={this.toggleMenu}
-                            to="/calendar"
+                            to="/projects"
                             className="menu__link"
                             activeClassName='menu__link--active'
                         >
-                            Events
+                            Projects
                         </NavLink>
                     </li>
                     <li className="menu__list-item">
@@ -145,9 +145,9 @@ class Menu extends Component {
                                 <Link
                                     onClick={this.toggleMenu}                                    
                                     className="menu__dropdown-link"
-                                    to="/3sp"                                    
+                                    to="/calendar"                                    
                                 >
-                                    STEM Student Scholars
+                                    Calendar
                                 </Link>
                                 {/* <a className="menu__dropdown-link" href="">Other stuff</a> */}
                             </li>

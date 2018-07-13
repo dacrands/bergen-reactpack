@@ -31,15 +31,25 @@ class Projects extends Component {
 
     renderProjects(project) {
         return (
-            <div style={{ backgroundImage: `url(${project.primaryImage})` }} className="project">
+            <article style={{ backgroundImage: `url(${project.primaryImage})` }} className="project">
                 <div className="project--overlay">
                     <h2>{project.name} </h2>
-                    <p>{project.desc}</p>
+                    {/* <p>{project.desc}</p> */}
                     <Link to={`/projects/${project.id}`}>View Project</Link>
                 </div>
                 
                 {/* <img className="img-fluid thumbnail" src={project.primaryImage} alt=""/> */}
-            </div>
+            </article>
+            
+            // <article className="project">
+            //     <div className="project__img" style={{ backgroundImage: `url(${project.primaryImage})` }}>                
+            //     </div>
+            //     <div>
+            //         <h2>{project.name}</h2>
+            //         <p>{project.desc}</p>
+            //     </div>
+
+            // </article>
             
         );
     }
