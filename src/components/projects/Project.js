@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { Link } from 'react-router-dom';
 import Header from '../Header';
 
 class Project extends Component {
@@ -41,8 +41,8 @@ class Project extends Component {
     render() {
         return (
             <div>
-                <Header title={this.state.name} />
-                <div className="container">
+                <Header image={this.state.image}/>
+                <div className="container project">
                     <div className="box">
                         <div className="box__content-text">
                             {this.state.desc}
@@ -51,7 +51,9 @@ class Project extends Component {
                             <img src={this.state.image} alt="" className="img-fluid thumbnail"/>
                         </div>                        
                     </div>                    
-                </div>                
+                    <Link to="/projects">&#8672; Back</Link>                
+                </div>
+                
             </div>
         );
     }

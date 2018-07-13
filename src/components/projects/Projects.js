@@ -31,7 +31,7 @@ class Projects extends Component {
 
     renderProjects(project) {
         return (
-            <article style={{ backgroundImage: `url(${project.primaryImage})` }} className="project">
+            <article style={{ backgroundImage: `url(${project.primaryImage})` }} className="projects__item">
                 <div className="project--overlay">
                     <h2>{project.name} </h2>
                     {/* <p>{project.desc}</p> */}

@@ -43,6 +43,41 @@
   display: none;
 }
 
+
+/* ============
+IMAGE HEADER
+============ */
+.header--bg {
+  background: #000;
+  position: relative;
+}
+
+.header--overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.7);
+}
+
+.header--img {
+  height: 50vh;
+  background: #000;  
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  background-position: center;
+  overflow: hidden;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+
+
+
+
+
 @media(max-width:1200px) {
   .header {
     font-size: 5vw;
