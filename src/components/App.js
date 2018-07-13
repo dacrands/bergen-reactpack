@@ -17,7 +17,7 @@ import Calendar from './Calendar';
 import Contact from './Contact';
 import Benefits from './Benefits';
 import Landing from './landing/Landing';
-import Projects from './projects/index';
+import Projects from './projects/Projects';
 import Project from './projects/Project';
 
 
@@ -64,7 +64,8 @@ class App extends Component {
               <Route path="/calendar" component={Calendar} />
               <Route path="/benefits" component={Benefits} />
               <Route exact path="/projects" component={Projects} />
-              <Route path={`/projects/${this.state.currProject}`} render={() => <Project id={this.state.currProject} getId={this.getProjectId} />} />
+              {/* <Route path={`/projects/${this.state.currProject}`} render={() => <Project id={this.state.currProject} getId={this.getProjectId} />} /> */}
+              <Route path={"/projects/:id"} component={Project} />
               <Route path="/login" component={Login} />
             <Footer />
           </div>
