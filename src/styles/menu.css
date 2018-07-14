@@ -27,7 +27,7 @@ until loogo
 }
 
 /* ----------------------------------
-Send the lis to the end menu ul
+Send the ul to the end of the nav
 ---------------------------------- */
 .menu__list {
     /* outline: 4px solid salmon; */

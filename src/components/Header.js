@@ -10,6 +10,9 @@ class Header extends Component {
             return(
                 <div className="header--bg">
                     <div className="header--overlay">
+                        <div className="container">
+                            <h1 className="header__title">{this.props.title}</h1>
+                        </div>                        
                     </div>
                     <header 
                         style={{ backgroundImage: `url(${this.props.image})` }} 
@@ -22,7 +25,7 @@ class Header extends Component {
         return (
             // <header className={this.props.title ? "header" : "header--hide"}>
             <header className={"header"}>
-                <h1>{this.props.title}</h1>                           
+                <h1 className="header__title">{this.props.title}</h1>                           
             </header>
         );
     }

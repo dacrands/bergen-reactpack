@@ -48,27 +48,10 @@
 }
 
 .box__img {
-    outline: 3px solid green;    
+    /* outline: 3px solid green;    */
+    text-align: center; 
 }
 
-.box__content {
-    /* outline: 3px solid blue; */
-    height: min-content;
-    /* padding: 20px; */
-    /* box-shadow: 0 0 10px rgba(0,0,0,0.2); */
-}
-
-.box__content-text p,
-.box__content-text h3 {
-    margin: 0;
-}
-
-.box__content-text {
-    margin: 1.3em 0;
-}
-.box__content-title {
-    color: var(--dark);
-}
 
 @media (max-width:768px) {
     .title {
