@@ -19,7 +19,11 @@ class Projects extends Component {
         this.toggleNav = this.toggleNav.bind(this);
     }
 
-    
+    componentDidUpdate() {
+        this.state.showNav
+        ? document.body.style.overflow = 'hidden'
+        : document.body.style.overflow = 'auto';
+    }
 
     toggleNav() {
         this.state.showNav

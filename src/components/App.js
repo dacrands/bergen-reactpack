@@ -11,6 +11,7 @@ import {
 import Menu from './Menu';
 import Footer from './Footer';
 import Login from './Login';
+import Register from './Register';
 import ScrollToTop from './ScrollToTop';
 import Scholars from './Scholars';
 import Calendar from './Calendar';
@@ -67,6 +68,7 @@ class App extends Component {
               {/* <Route path={`/projects/${this.state.currProject}`} render={() => <Project id={this.state.currProject} getId={this.getProjectId} />} /> */}
               <Route path={"/projects/:id"} component={Project} />
               <Route path="/login" component={Login} />
+              <Route path="/register" component={Register} />
             <Footer />
           </div>
         </ScrollToTop>
