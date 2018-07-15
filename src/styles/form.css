@@ -6,6 +6,16 @@
     margin-bottom: 50px;
 }
 
+.form--height {
+    min-height: 90vh;
+    padding-top: 20vh;
+}
+
+.form--dark {
+    background: linear-gradient(45deg, var(--primary-light),  var(--primary-dark));
+    color: var(--comp);
+}
+
 .form__item {
     display: flex;
     flex-direction: column;
