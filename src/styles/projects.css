@@ -35,6 +35,10 @@
     /* overflow: hidden; */
 }
 
+.projects__nav button {
+    display: none;
+}
+
 .projects__nav ul {
     text-align: center;
     /* position: fixed; */
@@ -137,6 +141,11 @@ PROJECT COMPONENT
         transform: translateX(-100%);
         overflow-y: scroll;
     }
+
+    .projects__nav button {
+        display: block;
+    }
+    
 
     .projects__nav--show {
         transform: translateX(0);
