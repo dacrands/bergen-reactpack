@@ -88,7 +88,7 @@ class Projects extends Component {
                             <button onClick={this.toggleNav}>Close</button>
                         </ul>
                     </nav>
-                    <main className="projects__main">
+                    <main className="projects__main content--pattern">
                         {
                          this.state.loaded
                          ? this.state.projects.map(this.renderProjects)
