@@ -41,23 +41,25 @@ class Menu extends Component {
     }
 
     toggleMenu() {
-        const pattyList = this.refs.patties.childNodes;
-        const pattyListBool = pattyList[0].classList.contains('patty--collapse-1');
+        if (window.innerWidth <= 768) {
+            const pattyList = this.refs.patties.childNodes;
+            const pattyListBool = pattyList[0].classList.contains('patty--collapse-1');
 
-        const orderPatties = (arr, bool) => {
-            if (bool) {
-                var numOne = 1; var numTwo = 2;
-            } else { var numOne = 2; var numTwo = 1; };
+            const orderPatties = (arr, bool) => {
+                if (bool) {
+                    var numOne = 1; var numTwo = 2;
+                } else { var numOne = 2; var numTwo = 1; };
 
-            arr.forEach((patty) => {
-                setTimeout(() => {
-                    patty.classList.toggle(`patty--collapse-${numOne}`);
-                }, 150);
-                patty.classList.toggle(`patty--collapse-${numTwo}`);
-            });
-        }
-        this.setState({ mobileMenu: !pattyListBool });
-        orderPatties(pattyList, pattyListBool);
+                arr.forEach((patty) => {
+                    setTimeout(() => {
+                        patty.classList.toggle(`patty--collapse-${numOne}`);
+                    }, 150);
+                    patty.classList.toggle(`patty--collapse-${numTwo}`);
+                });
+            }
+            this.setState({ mobileMenu: !pattyListBool });
+            orderPatties(pattyList, pattyListBool);
+        }        
     }
 
     setPadding() {
@@ -96,8 +98,7 @@ class Menu extends Component {
                             onClick={this.toggleMenu}
                             exact
                             to="/benefits"
-                            className="menu__link"
-                            
+                            className="menu__link"                            
                             activeClassName='menu__link--active'
                         >
                             About

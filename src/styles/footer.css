@@ -8,6 +8,12 @@
     flex-wrap: wrap;
     padding: 10px;
     align-content: center;    
+    position: absolute;
+    width: 100%;
+}
+
+.footer a:link:hover {
+    text-decoration: none;
 }
 
 .footer__item, .footer a {

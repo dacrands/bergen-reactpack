@@ -12,6 +12,16 @@ class Login extends Component {
         document.body.style = 'background: none'
     }
 
+    handleSubmit(event) {
+        event.preventDefault();
+        const data = new FormData(event.target);
+
+        fetch('/api/users/login', {
+            method: 'POST',
+            body: data
+        })
+    }
+
     render() {
         return (
             <div className="container login--container">
@@ -19,7 +29,7 @@ class Login extends Component {
                 <div className="login__text">
                     <h1>Login</h1>
                 </div>
-                <div className="login__form">
+                <form className="login__form" onSubmit={this.handleSubmit.bind(this)}>
                     <div className="login__input">
                         <label htmlFor="email">
                             Email
@@ -31,8 +41,9 @@ class Login extends Component {
                             Password
                         </label>
                         <input type="password"/>                    
-                    </div>                
-                </div>
+                    </div>      
+                    <input type="submit" formAction/>          
+                </form>
                 </div>
             </div>
         );

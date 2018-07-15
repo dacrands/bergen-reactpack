@@ -51,10 +51,10 @@ class Project extends Component {
                         <hr className="hr"/>
                     </div>
                     <div className="box">
-                        <div className="box__content-text">
+                        <div className="box__text">
                             {this.state.desc}
                         </div>
-                        <div className="box__content">
+                        <div className="box__img">
                             <img src={this.state.image} alt="" className="img-fluid thumbnail"/>
                         </div>                        
                     </div>    

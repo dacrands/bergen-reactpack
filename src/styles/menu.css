@@ -11,6 +11,11 @@
     transition: all 250ms ease-in;
 }
 
+.menu__list a:link:hover,
+.menu__logo a:link:hover{
+    text-decoration: none;
+}
+
 /* ----------------------------------
 Bigger font size, greater weight
 for logo text -- temp visual holder
