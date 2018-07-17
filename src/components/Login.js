@@ -25,7 +25,7 @@ class Login extends Component {
         const data = new FormData(event.target);  
         let stringData = stringifyFormData(data);
 
-        fetch('http://bccstem-env.ikpje5mqwr.us-east-1.elasticbeanstalk.com/api/users/login', {            
+        fetch('/api/users/login', {            
             method: 'POST',
             headers: {
                 "Content-Type": "application/json; charset=utf-8"
@@ -33,6 +33,9 @@ class Login extends Component {
             body: stringData
         })
         .then(response => response.json())
+        .then(x => {
+            window.userData = x.userData;
+        })
         .catch(e => console.error(e));
     }
 
