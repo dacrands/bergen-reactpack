@@ -53,7 +53,7 @@ class Project extends Component {
                         <hr className="hr"/>
                     </div>
                     <div className="box">
-                        <div className="box__text">
+                        <div className="box__text box--center">
                             {this.state.desc}
                         </div>
                         <div className="box__img">
@@ -97,7 +97,7 @@ class Project extends Component {
                             <div className="box__text">
                                 <h2>Contact</h2>
                                 <ul>
-                                    <li> <a href={"student@bergen.edu"}> student@bergen.edu</a></li>
+                                    <li> <a href={"mailto:student@bergen.edu"}> student@bergen.edu</a></li>
                                 </ul>
                             </div>
                         </div>
