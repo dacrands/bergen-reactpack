@@ -33,18 +33,9 @@ class Login extends Component {
             },
             body: stringData
         })
-<<<<<<< HEAD
-        .then(response => {
-            console.log(response.status)            
-            response.json()
-            if (response.status === 200) {
-                return <Redirect to='/' />
-            }
-=======
         .then(response => response.json())
         .then(x => {
             window.userData = x.userData;
->>>>>>> d7781bdc4a35c8caaeab347bcdca7d8a0f5ca932
         })
         .catch(e => console.error(e));
     }
