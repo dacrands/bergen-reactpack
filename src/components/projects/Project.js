@@ -93,6 +93,23 @@ class Project extends Component {
                                 </ul>
                             </div>
                         </div>
+                        <div className="box__item">
+                            <div className="box__text">
+                                <h2>Contact</h2>
+                                <ul>
+                                    <li> <a href={"student@bergen.edu"}> student@bergen.edu</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="box__item">
+                            <div className="box__text">
+                                <h2>Meeting Time/Location</h2>
+                                <ul>
+                                    <li>{"Thursday 6pm"}</li>
+                                    <li>{"Room S-315"}</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                                   
                 </main>
