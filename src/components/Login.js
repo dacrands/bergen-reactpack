@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom'
 
 import { stringify } from 'querystring';
 
@@ -32,7 +33,13 @@ class Login extends Component {
             },
             body: stringData
         })
-        .then(response => response.json())
+        .then(response => {
+            console.log(response.status)            
+            response.json()
+            if (response.status === 200) {
+                return <Redirect to='/' />
+            }
+        })
         .catch(e => console.error(e));
     }
 

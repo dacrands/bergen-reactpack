@@ -177,6 +177,25 @@ class Menu extends Component {
                                     STEM Summit
                                 </a>
                             </li>
+                            <hr className="hr"/>                
+                            <li className="menu__dropdown-item">
+                                <Link
+                                    onClick={this.toggleMenu}                                    
+                                    className="menu__dropdown-link"
+                                    to="/login"                                    
+                                >
+                                Login
+                                </Link>                                
+                            </li>                            
+                            <li className="menu__dropdown-item">
+                                <Link
+                                    onClick={this.toggleMenu}                                    
+                                    className="menu__dropdown-link"
+                                    to="/register"                                    
+                                >
+                                Register
+                                </Link>                                
+                            </li>                            
                         </ul>
                     </li>
                 </ul>

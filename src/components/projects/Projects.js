@@ -55,6 +55,10 @@ class Projects extends Component {
         });
     }
 
+    componentWillUnmount() {
+        return document.body.style.overflow = 'auto';
+    }
+
     renderProjects(project) {
         return (
             <article key={project.id} style={{ backgroundImage: `url(${project.primaryImage})` }} className="projects__item">
@@ -100,9 +104,9 @@ class Projects extends Component {
                 </section>
                 <button
                     onClick={this.toggleNav} 
-                    className="projects__button"
+                    className="projects__button form__button--dark"
                 >
-                    &#8801;
+                &#8801;
                 </button>              
             </div>
         );

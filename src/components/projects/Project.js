@@ -36,11 +36,7 @@ class Project extends Component {
                     team: response.team,
                 });
             }).catch(e => console.log(e));
-        });    
-        
-        
-        
-        
+        });     
     }
 
     render() {
@@ -111,10 +107,9 @@ class Project extends Component {
                             </div>
                         </div>
                     </div>
-                                  
+                    <Link to="/projects">&#8672; Back</Link>               
                 </main>
-                <Blog />
-                <Link to="/projects">&#8672; Back</Link>  
+                <Blog />                
             </div>
         );
     }

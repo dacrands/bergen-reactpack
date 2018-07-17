@@ -100,7 +100,7 @@
     bottom: 0;
     right: 0;
     margin: 1em;
-    background: var(--dark);
+    
     border-radius: 50%;
     border: 2px solid var(--light);
     color: var(--light);
@@ -123,7 +123,7 @@ PROJECT COMPONENT
 
 }
 
-@media(max-width:768px) {
+@media(max-width:900px) {
     .projects {
         grid-template-columns: 1fr;
         grid-template-areas: "main";

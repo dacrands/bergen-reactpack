@@ -78,6 +78,19 @@ class Blog extends Component {
             }            
         }
     }
+
+    componentDidMount() {
+        fetch('http://bccstem-env.ikpje5mqwr.us-east-1.elasticbeanstalk.com/api/projects/getAllProjectMeta', {
+            method: 'post',
+        }).then(result => {
+            return result.json()
+        }).then((response) => {            
+            this.setState({
+                loaded:true, 
+                projects: response
+            });
+        }).catch(e => console.log(e));
+    }
    
     render() {
         return (
@@ -87,8 +100,6 @@ class Blog extends Component {
                 <div className="container--small"> 
                     <div className="title">
                         <h1>Blog</h1>
-                        <br/>
-                        {/* <hr className="hr hr--light"/> */}
                     </div>                     
                         {console.log(this.state.blog.posts)}
                         {this.state.blog.posts.map(post => { 
