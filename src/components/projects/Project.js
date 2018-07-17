@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+
 import Header from '../Header';
+import Blog from './Blog';
 
 class Project extends Component {
     constructor(props) {
@@ -92,9 +94,10 @@ class Project extends Component {
                             </div>
                         </div>
                     </div>
-                    <Link to="/projects">&#8672; Back</Link>                
+                                  
                 </main>
-                
+                <Blog />
+                <Link to="/projects">&#8672; Back</Link>  
             </div>
         );
     }

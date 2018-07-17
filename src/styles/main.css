@@ -15,6 +15,7 @@
     --primary-light-bg: hsl(253, 100%, 40%);
     --light: #f1f1f1;
     --dark: #424040;
+    --med: #575252;
     --comp: #FFD513;
     --comp-light: hsla(49, 92%, 75%, 0.849);
 }
@@ -60,6 +61,11 @@ h2, h3, h4, h5 {
     font-weight: bold;
 }
 
+.h1 {
+    color: var(--med);
+    /* font-weight: 100; */
+}
+
 .text--center {
     text-align: center;
 }
@@ -69,6 +75,11 @@ h2, h3, h4, h5 {
     max-width: 1000px;
     margin: 0 auto;
     /* background: #ffffff; */
+}
+
+.container--small {
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 .absolute--cover {

@@ -4,6 +4,7 @@ import FadeIn from 'react-lazyload-fadein';
 
 import Header from '../Header';
 
+
 import '../../styles/projects.css'
 import { throws } from 'assert';
 
@@ -102,7 +103,7 @@ class Projects extends Component {
                     className="projects__button"
                 >
                     &#8801;
-                </button>
+                </button>              
             </div>
         );
     }
