@@ -11,7 +11,7 @@ class Project extends Component {
             name: null,
             desc: null,
             projectId: null,
-            advisor: null,
+            advisors: null,
             team: null,
         }
     }
@@ -31,7 +31,7 @@ class Project extends Component {
                     name: response.name,
                     desc: response.desc,
                     image: response.primaryImage,
-                    advisor: response.advisor,
+                    advisors: response.advisor,
                     team: response.team,
                 });
             }).catch(e => console.log(e));
@@ -66,7 +66,20 @@ class Project extends Component {
                             <div className="box__text">
                                 <h2>Advisor(s)</h2>
                                 <ul>
-                                    <li>{this.state.advisor}</li>
+                                {   
+                                        this.state.advisors
+                                        ? this.state.advisors
+                                            .replace(/[\[\]']+/g,'')
+                                            .split(',')
+                                            .map( (advisor, index) => {
+                                            return (
+                                                        <li key={`advisor-${index}`}>{advisor.replace(/["]+/g, '')}</li>
+                                                    )
+                                        })
+                                        
+                                        : 'loading'                                    
+                                        
+                                    }
                                 </ul>
                             </div>
                         </div>
@@ -76,21 +89,18 @@ class Project extends Component {
                                 <ul>
                                     {   
                                         this.state.team
-                                        // ? this.state.team.split(';').map((student, index) => {
-                                        //     return (
-                                        //         <li key={`student-${}`}>{student}</li>
-                                        //     )
-                                        // })
-                                        ? this.state.team.replace(/[\[\]']+/g,'').split(',').map( (student, index) => {
+                                        ? this.state.team
+                                            .replace(/[\[\]']+/g,'')
+                                            .split(',')
+                                            .map( (student, index) => {
                                             return (
-                                                        <li key={`student-${index}`}>{student.replace(/['"]+/g, '')}</li>
+                                                        <li key={`student-${index}`}>{student.replace(/["]+/g, '')}</li>
                                                     )
                                         })
                                         
                                         : 'loading'                                    
                                         
-                                    }
-                                    
+                                    }                                    
                                 </ul>
                             </div>
                         </div>
