@@ -14,6 +14,8 @@ class Project extends Component {
             advisors: null,
             team: null,
         }
+
+        this.parseArrString = this.parseArrString.bind(this);
     }
 
     
@@ -36,6 +38,10 @@ class Project extends Component {
                 });
             }).catch(e => console.log(e));
         });     
+    }
+
+    parseArrString(str) {
+        return str.replace(/[\[\]']+/g,'').split(',')
     }
 
     render() {
@@ -68,10 +74,7 @@ class Project extends Component {
                                 <ul>
                                 {   
                                         this.state.advisors
-                                        ? this.state.advisors
-                                            .replace(/[\[\]']+/g,'')
-                                            .split(',')
-                                            .map( (advisor, index) => {
+                                        ? this.parseArrString(this.state.advisors).map( (advisor, index) => {
                                             return (
                                                         <li key={`advisor-${index}`}>{advisor.replace(/["]+/g, '')}</li>
                                                     )
@@ -89,10 +92,7 @@ class Project extends Component {
                                 <ul>
                                     {   
                                         this.state.team
-                                        ? this.state.team
-                                            .replace(/[\[\]']+/g,'')
-                                            .split(',')
-                                            .map( (student, index) => {
+                                        ? this.parseArrString(this.state.team).map( (student, index) => {
                                             return (
                                                         <li key={`student-${index}`}>{student.replace(/["]+/g, '')}</li>
                                                     )
