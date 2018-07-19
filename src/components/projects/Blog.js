@@ -101,10 +101,10 @@ class Blog extends Component {
                     <div className="title">
                         <h1>Blog</h1>
                     </div>                     
-                        {console.log(this.state.blog.posts)}
-                        {this.state.blog.posts.map(post => { 
+                        {/* {console.log(this.state.blog.posts)} */}
+                        {this.state.blog.posts.map( (post, index) => { 
                             return (  
-                                <div className="box box--block">            
+                                <div key={`post-${index}`} className="box box--block">            
                                     <div className="box__content">
                                         <div className="box__content-title">
                                             <h1 className="h1"> {post.date}  </h1>                               

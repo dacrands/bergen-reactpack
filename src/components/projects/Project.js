@@ -27,7 +27,6 @@ class Project extends Component {
             }).then(result => {
                 return result.json()
             }).then(response => {         
-                console.log(response)   
                 this.setState({
                     name: response.name,
                     desc: response.desc,
@@ -77,11 +76,17 @@ class Project extends Component {
                                 <ul>
                                     {   
                                         this.state.team
-                                        ? this.state.team.split(';').map((student) => {
+                                        // ? this.state.team.split(';').map((student, index) => {
+                                        //     return (
+                                        //         <li key={`student-${}`}>{student}</li>
+                                        //     )
+                                        // })
+                                        ? this.state.team.replace(/[\[\]']+/g,'').split(',').map( (student, index) => {
                                             return (
-                                                <li>{student}</li>
-                                            )
+                                                        <li key={`student-${index}`}>{student.replace(/['"]+/g, '')}</li>
+                                                    )
                                         })
+                                        
                                         : 'loading'                                    
                                         
                                     }
