@@ -2,15 +2,6 @@ import React, { Component } from 'react';
 
 import Header from '../Header';
 
-function stringifyFormData(fd) {
-    const data = {};
-      for (let key of fd.keys()) {
-        data[key] = fd.get(key);
-    }
-    return JSON.stringify(data, null, 2);
-}
-
-
 
 class Edit extends Component {
 
@@ -28,6 +19,8 @@ class Edit extends Component {
     componentDidMount() {
         const projectId = this.props.match.params.id;
         this.setState({ projectId });
+
+        // Throw the fetch into the task queue so we can setState
         setTimeout(()=> {
             fetch(`http://bccstem-env.ikpje5mqwr.us-east-1.elasticbeanstalk.com/api/projects/getProjectMetaData/${this.state.projectId}`, {
                 method: 'post',
@@ -46,18 +39,20 @@ class Edit extends Component {
         });     
     }
 
+    handleChange(event) {
+        this.setState({ [event.target.name] : event.target.value })
+    }
+
     handleProjectEdit(event) {
         event.preventDefault();
+        
         const data = new FormData(event.target);  
-        // console.log('STRING', JSON.stringify(data))
         let stringData = stringifyFormData(data);
-        console.log(typeof stringData)
         let editData = {
             projectID: this.state.projectId,
             newMeta: stringData
         }
 
-        console.log(JSON.stringify(editData))
         fetch('http://bccstem-env.ikpje5mqwr.us-east-1.elasticbeanstalk.com/api/projects/editProjectMeta', {            
             method: 'POST',
             headers: {
@@ -67,13 +62,7 @@ class Edit extends Component {
         })
         .then(response => response.json())
         .catch(e => console.error(e));
-    }
-
-    handleChange(event) {
-        // console.log(event.target.name);
-
-        this.setState({ [event.target.name] : event.target.value })
-    }
+    }    
 
     render() {
         return (
@@ -119,3 +108,17 @@ class Edit extends Component {
 }
 
 export default Edit;
+
+// ----------------------------------
+//         HELPER FUNCTIONS
+// ----------------------------------
+
+// Working with form data is a bit involved with react.
+// This function stringifies the data since JSON.stringify() won't.
+function stringifyFormData(fd) {
+    const data = {};
+      for (let key of fd.keys()) {
+        data[key] = fd.get(key);
+    }
+    return JSON.stringify(data, null, 2);
+}
