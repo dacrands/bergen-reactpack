@@ -27,7 +27,6 @@ class Edit extends Component {
             }).then(result => {
                 return result.json()
             }).then(response => {         
-                console.log(response)   
                 this.setState({
                     name: response.name,
                     desc: response.desc,
@@ -53,12 +52,19 @@ class Edit extends Component {
             newMeta: stringData
         }
 
+        console.log(JSON.stringify(editData))        
+        
+        // debugger;
+
+        const sendData = JSON.stringify(editData)
+        console.log(typeof JSON.parse(sendData))
+        console.log(JSON.parse(sendData))
         fetch('http://bccstem-env.ikpje5mqwr.us-east-1.elasticbeanstalk.com/api/projects/editProjectMeta', {            
             method: 'POST',
             headers: {
                 "Content-Type": "application/json; charset=utf-8"
             },
-            body: JSON.stringify(editData)
+            body: sendData
         })
         .then(response => response.json())
         .catch(e => console.error(e));
@@ -72,19 +78,42 @@ class Edit extends Component {
                     <form action="" className="form" onSubmit={this.handleProjectEdit.bind(this)}>
                         <div className="form__item">
                             <label htmlFor="name" className="form__item-label">Name</label>
-                            <input type="text" onChange={this.handleChange.bind(this)} className="form__item-input" value={this.state.name}/>
+                            <input 
+                                type="text" 
+                                onChange={this.handleChange.bind(this)} 
+                                className="form__item-input" 
+                                value={this.state.name}
+                            />
                         </div>
                         <div className="form__item">
                             <label htmlFor="image" className="form__item-label">Image</label>
-                            <input name="projectImage" type="text" onChange={this.handleChange.bind(this)} className="form__item-input" value={this.state.primaryImage}/>
+                            <input 
+                                name="projectImage" 
+                                type="text" 
+                                onChange={this.handleChange.bind(this)} 
+                                className="form__item-input" 
+                                value={this.state.primaryImage}
+                            />
                         </div>
                         <div className="form__item">
                             <label htmlFor="adivsor" className="form__item-label">Advisor</label>
-                            <input name="advisor" type="text" onChange={this.handleChange.bind(this)} className="form__item-input" value={this.state.advisor}/>
+                            <input 
+                                name="advisor" 
+                                type="text" 
+                                onChange={this.handleChange.bind(this)} 
+                                className="form__item-input" 
+                                value={this.state.advisor}
+                            />
                         </div>
                         <div className="form__item">
                             <label htmlFor="team" className="form__item-label">Team</label>
-                            <input name="team" type="text" onChange={this.handleChange.bind(this)} className="form__item-input" value={this.state.team}/>
+                            <input 
+                                name="team" 
+                                type="text" 
+                                onChange={this.handleChange.bind(this)} 
+                                className="form__item-input" 
+                                value={this.state.team}
+                            />
                         </div>
                         <div className="form__item">
                             <label htmlFor="desc" className="form__item-label">Description</label>

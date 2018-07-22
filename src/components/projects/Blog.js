@@ -4,10 +4,11 @@ import Header from '../Header';
 
 
 class Blog extends Component {
-
+    
     constructor(props) {
         super(props);
         this.state = {
+            showMenu: false,
             blog: {
                 title: 'Lorem ipsum dolor sit.',
                 posts: [
@@ -77,6 +78,8 @@ class Blog extends Component {
                 ]
             }            
         }
+
+        this.showBlogMenu = this.showBlogMenu.bind(this);
     }
 
     componentDidMount() {
@@ -90,41 +93,68 @@ class Blog extends Component {
                 projects: response
             });
         }).catch(e => console.log(e));
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > this.refs.blog.offsetTop) {
+                this.refs.blogMenu.classList.add('blog__menu--fixed')                
+            } else {
+                this.refs.blogMenu.classList.remove('blog__menu--fixed')                
+            }
+        })
+    }
+
+    showBlogMenu() {
+        this.refs.blogMenu.classList.toggle('blog__menu--show')
+        const tempBool = this.state.showMenu;
+        this.setState({ showMenu: !tempBool })
     }
    
     render() {
         return (
-            <div className="content--med  blog">
-                {/* <Header title={this.state.blog.title} /> */}
-                              
+            <div className="content--med  blog" ref="blog">    
+
+                <nav className="blog__menu blog__menu--show" ref="blogMenu">
+                    <div className="blog__menu-container">
+                        <button className={"form__button"} onClick={this.showBlogMenu}>
+                        {
+                            this.state.showMenu
+                            ? "\u2716"
+                            : "\u203A"
+                        }
+                        </button>
+                        <ul>
+                            <li>{this.props.meeting}</li>
+                            <li>{this.props.contact}</li>
+                        </ul>
+                    </div>                    
+                </nav>                         
                 <div className="container--small"> 
                     <div className="title">
                         <h1>Blog</h1>
                     </div>                     
-                        {/* {console.log(this.state.blog.posts)} */}
-                        {this.state.blog.posts.map( (post, index) => { 
-                            return (  
-                                <div key={`post-${index}`} className="box box--block">            
-                                    <div className="box__content">
-                                        <div className="box__content-title">
-                                            <h1 className="h1"> {post.date}  </h1>                               
-                                            <h3> {post.title} </h3>
-                                            <p> <strong>Time: </strong>{post.meeting} </p>
-                                        </div>
-                                        <hr className="hr"/>
-                                        <div className="box__content-text">                                
-                                            <p>{post.body}</p>
-                                            <img className="img-fluid thumbnail" src={post.image} alt="" />
-                                            <p>{post.body}</p>
-                                            <img className="img-fluid thumbnail" src={post.image} alt="" />
-                                            <img className="img-fluid thumbnail" src={post.image} alt="" />
-                                            <p>{post.body}</p>                                        
-                                        </div>
+                    {this.state.blog.posts.map( (post, index) => { 
+                        return (  
+                            <div key={`post-${index}`} className="box box--block">            
+                                <div className="box__content">
+                                    <div className="box__content-title">
+                                        <h1 className="h1"> {post.date}  </h1>                               
+                                        <h3> {post.title} </h3>
+                                        <p> <strong>Time: </strong>{post.meeting} </p>
+                                    </div>
+                                    <hr className="hr"/>
+                                    <div className="box__content-text">                                
+                                        <p>{post.body}</p>
+                                        <img className="img-fluid thumbnail" src={post.image} alt="" />
+                                        <p>{post.body}</p>
+                                        <img className="img-fluid thumbnail" src={post.image} alt="" />
+                                        <img className="img-fluid thumbnail" src={post.image} alt="" />
+                                        <p>{post.body}</p>                                        
                                     </div>
                                 </div>
-                            )                            
-                        })}                
-                    </div>                                    
+                            </div>
+                        )                            
+                    })}                
+                </div>                                    
             </div>      
         );
     }

@@ -80,8 +80,7 @@ class Project extends Component {
                                                     )
                                         })
                                         
-                                        : 'loading'                                    
-                                        
+                                        : 'loading'                                                                            
                                     }
                                 </ul>
                             </div>
@@ -124,7 +123,8 @@ class Project extends Component {
                     </div>
                     <Link to="/projects">&#8672; Back</Link>               
                 </main>
-                <Blog />                
+
+                <Blog meeting={"Lab room form 9 to 6"} contact={"student@email.com"} />                
             </div>
         );
     }

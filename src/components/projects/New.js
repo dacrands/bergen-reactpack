@@ -27,6 +27,8 @@ class New extends Component {
         event.preventDefault();
         const data = new FormData(event.target);  
         let stringData = stringifyFormData(data);
+
+        console.log(JSON.parse(stringData))
         
         fetch('http://bccstem-env.ikpje5mqwr.us-east-1.elasticbeanstalk.com/api/projects/createNewProject', {            
             method: 'POST',

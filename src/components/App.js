@@ -7,22 +7,20 @@ import {
 } from 'react-router-dom';
 
 
-
-import Menu from './Menu';
-import Footer from './Footer';
-import Login from './Login';
-import Register from './Register';
 import ScrollToTop from './ScrollToTop';
-import Scholars from './Scholars';
-import Calendar from './Calendar';
-import Contact from './Contact';
-import Benefits from './Benefits';
+import Menu from './Menu';
 import Landing from './landing/Landing';
+import Scholars from './Scholars';
+import Contact from './Contact';
+import Calendar from './Calendar';
+import Benefits from './Benefits';
 import Projects from './projects/Projects';
+import New from './projects/New';
 import Project from './projects/Project';
 import Edit from './projects/Edit';
-import New from './projects/New';
-
+import Login from './Login';
+import Register from './Register';
+import Footer from './Footer';
 
 
 class App extends Component {
@@ -67,8 +65,7 @@ class App extends Component {
               <Route path="/calendar" component={Calendar} />
               <Route path="/benefits" component={Benefits} />
               <Route exact path="/projects" component={Projects} />
-              <Route exact path="/projects/a/new" component={New} />
-              {/* <Route path={`/projects/${this.state.currProject}`} render={() => <Project id={this.state.currProject} getId={this.getProjectId} />} /> */}
+              <Route exact path="/projects/a/new" component={New} />              
               <Route exact path={"/projects/:id"} component={Project} />
               <Route path={"/projects/:id/edit"} component={Edit} />
               <Route path="/login" component={Login} />

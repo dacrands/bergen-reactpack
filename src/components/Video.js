@@ -13,7 +13,7 @@ class Video extends Component {
         const source = `https://img.youtube.com/vi/${this.state.embed}/sddefault.jpg`;
         const image = new global.Image();
         image.srcset = source;
-        image.alt = 'youtube thumbnail'
+        image.alt = 'Bergen STEM Youtube'
         image.classList.add('lazy');
         image.addEventListener('load', () => {
             this.refs.videoWrap.appendChild(image);
