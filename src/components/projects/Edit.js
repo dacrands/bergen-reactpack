@@ -47,18 +47,15 @@ class Edit extends Component {
         
         const data = new FormData(event.target);  
         let stringData = stringifyFormData(data);
+        let objData = JSON.parse(stringData);
+        
         let editData = {
             projectID: this.state.projectId,
-            newMeta: stringData
+            newMeta: objData
         }
 
-        console.log(JSON.stringify(editData))        
-        
-        // debugger;
-
         const sendData = JSON.stringify(editData)
-        console.log(typeof JSON.parse(sendData))
-        console.log(JSON.parse(sendData))
+
         fetch('http://bccstem-env.ikpje5mqwr.us-east-1.elasticbeanstalk.com/api/projects/editProjectMeta', {            
             method: 'POST',
             headers: {
