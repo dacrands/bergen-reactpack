@@ -94,6 +94,8 @@ class Blog extends Component {
             });
         }).catch(e => console.log(e));
 
+
+
         window.addEventListener('scroll', () => {
             if (window.scrollY > this.refs.blog.offsetTop) {
                 this.refs.blogMenu.classList.add('blog__menu--fixed')                
@@ -113,6 +115,7 @@ class Blog extends Component {
         return (
             <div className="content--med  blog" ref="blog">    
 
+                {/* <nav className="blog__menu blog__menu--show" ref="blogMenu"> */}
                 <nav className="blog__menu blog__menu--show" ref="blogMenu">
                     <div className="blog__menu-container">
                         <button className={"form__button"} onClick={this.showBlogMenu}>

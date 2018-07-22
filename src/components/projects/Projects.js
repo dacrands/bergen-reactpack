@@ -62,10 +62,12 @@ class Projects extends Component {
     renderProjects(project) {
         return (
             <article key={project.id} style={{ backgroundImage: `url(${project.primaryImage})` }} className="projects__item">
-                <div className="project--overlay">
-                    <h2>{project.name}</h2>
-                    <Link to={`/projects/${project.id}`}>View Project</Link>
-                </div>
+                <Link to={`/projects/${project.id}`}>
+                    <div className="project--overlay">
+                        <h2>{project.name}</h2>
+                        {/* View Project */}
+                    </div>
+                </Link>
             </article>
         );
     }
