@@ -27,7 +27,8 @@ class Login extends Component {
         let stringData = stringifyFormData(data);
 
         fetch('/api/users/login', {            
-            method: 'POST',
+            method: "POST",
+            credentials: "include",
             headers: {
                 "Content-Type": "application/json; charset=utf-8"
             },

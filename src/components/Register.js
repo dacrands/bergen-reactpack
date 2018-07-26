@@ -42,8 +42,9 @@ class Register extends Component {
         let stringData = stringifyFormData(data);
 
         console.log(stringData)
-        fetch('http://bccstem-env.ikpje5mqwr.us-east-1.elasticbeanstalk.com/api/users/register', {            
-            method: 'POST',
+        fetch("http://bccstem-env.ikpje5mqwr.us-east-1.elasticbeanstalk.com/api/users/register", {            
+            method: "POST",
+            credentials: "include",
             headers: {
                 "Content-Type": "application/json; charset=utf-8"
             },

@@ -31,7 +31,8 @@ class New extends Component {
         console.log(JSON.parse(stringData))
         
         fetch('http://bccstem-env.ikpje5mqwr.us-east-1.elasticbeanstalk.com/api/projects/createNewProject', {            
-            method: 'POST',
+            method: "POST",
+            credentials: "include",
             headers: {
                 "Content-Type": "application/json; charset=utf-8"
             },
