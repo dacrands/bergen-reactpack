@@ -34,8 +34,8 @@ class Login extends Component {
             body: stringData
         })
         .then(response => response.json())
-        .then(x => {
-            window.userData = x.userData;
+        .then(user => {
+            window.userData = user.userData;
         })
         .catch(e => console.error(e));
     }

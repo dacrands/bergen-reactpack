@@ -60,7 +60,7 @@
 .projects__item {
     position: relative;
     background: rgb(23, 22, 24);
-    background: #000;    
+    background: rgba(0, 0, 0, 0.61);    
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
