@@ -5,6 +5,12 @@
     padding: 20px;
     margin-bottom: 50px;
     border-radius: 14px;
+    color: var(--primary-dark)
+}
+
+.form__desc {
+    font-size: 0.8rem;
+    color: var(--med);
 }
 
 .form--height {
@@ -22,8 +28,9 @@
 .form__item {
     display: flex;
     flex-direction: column;
-    margin: 15px 0;
+    margin: 1.5em 0;
     font-size: 1.2rem;
+    
 }
 
 .form__item input,

@@ -95,14 +95,14 @@ class About extends Component {
                                 <h2>Program Elements</h2>
                             </div>
                             <div className="box__content-text">
-                                <ul>
+                                {/* <ul>
                                     <li><h3>Academic</h3></li>
                                     <li><h3>Research</h3></li>
                                     <li><h3>Service</h3></li>
-                                </ul>                            
-                                
-                                
-                                                            
+                                </ul>                             */}                               
+                                    <h3>Academic</h3>
+                                    <h3>Research</h3>
+                                    <h3>Service</h3>                                                          
                             </div>                                          
                         </div> {/* box__content */}
                     </div> {/* box  */} 

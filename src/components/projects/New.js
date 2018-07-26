@@ -20,15 +20,23 @@ class New extends Component {
             projectId: null,
             advisor: null,
             team: null,
+            times: null,
+            contact: null,
         }
-    }    
+    }
+
+    componentDidMount() {
+        document.body.style.background = "#dadada"
+    }
+
+    componentWillUnmount() {
+        document.body.style.background = ""
+    }
 
     handleProjectEdit(event) {
         event.preventDefault();
         const data = new FormData(event.target);  
         let stringData = stringifyFormData(data);
-
-        console.log(JSON.parse(stringData))
         
         fetch('http://bccstem-env.ikpje5mqwr.us-east-1.elasticbeanstalk.com/api/projects/createNewProject', {            
             method: 'POST',
@@ -69,7 +77,9 @@ class New extends Component {
                                 onChange={this.handleChange.bind(this)} 
                                 className="form__item-input" 
                                 value={this.state.primaryImage}
+                                ariaDescribedBy="imageDesc"                                
                             />
+                            <span class={"form__desc"} id="imageDesc">This should be an imgur link</span>
                         </div>
                         <div className="form__item">
                             <label htmlFor="adivsor" className="form__item-label">Advisor</label>
@@ -82,6 +92,17 @@ class New extends Component {
                             />
                         </div>
                         <div className="form__item">
+                            <label htmlFor="contact" className="form__item-label">Contact</label>
+                            <input 
+                                name="contact" 
+                                type="email" 
+                                onChange={this.handleChange.bind(this)} 
+                                className="form__item-input" 
+                                placeholder="e.g., student@bergen.edu"
+                                value={this.state.contact}                                
+                            />
+                        </div>
+                        <div className="form__item">
                             <label htmlFor="team" className="form__item-label">Team</label>
                             <input 
                                 name="team" 
@@ -89,6 +110,22 @@ class New extends Component {
                                 onChange={this.handleChange.bind(this)} 
                                 className="form__item-input" 
                                 value={this.state.team}
+                                placeholder="e.g., Lise Meitner; Enrico Fermi; Robert Oppenheimer"
+                                ariaDescribedBy="teamDesc"
+                            />
+                            <span class={"form__desc"} id="teamDesc">Place a semicolon between names</span>
+                        </div>
+                        <div className="form__item">
+                            <label htmlFor="times" className="form__item-label">
+                                Meeting place and time
+                            </label>
+                            <input 
+                                name="times" 
+                                type="text" 
+                                onChange={this.handleChange.bind(this)} 
+                                className="form__item-input" 
+                                placeholder="e.g., Lab room from noon to 3"
+                                value={this.state.meeting}
                             />
                         </div>
                         <div className="form__item">

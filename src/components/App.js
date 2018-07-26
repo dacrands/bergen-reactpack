@@ -18,6 +18,7 @@ import Projects from './projects/Projects';
 import New from './projects/New';
 import Project from './projects/Project';
 import Edit from './projects/Edit';
+import Delete from './projects/Delete';
 import Login from './Login';
 import Register from './Register';
 import Footer from './Footer';
@@ -68,6 +69,7 @@ class App extends Component {
               <Route exact path="/projects/a/new" component={New} />              
               <Route exact path={"/projects/:id"} component={Project} />
               <Route path={"/projects/:id/edit"} component={Edit} />
+              <Route path={"/projects/:id/delete"} component={Delete} />
               <Route path="/login" component={Login} />
               <Route path="/register" component={Register} />
             <Footer />
