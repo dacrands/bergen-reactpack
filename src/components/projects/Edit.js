@@ -10,11 +10,12 @@ class Edit extends Component {
         this.state = {
             name: null,
             desc: null,
+            primaryImage: null,
             projectId: null,
             advisor: null,
             team: null,
         }
-    }    
+    };
 
     componentDidMount() {
         const projectId = this.props.match.params.id;
@@ -23,7 +24,8 @@ class Edit extends Component {
         // Throw the fetch into the task queue so we can setState
         setTimeout(()=> {
             fetch(`http://bccstem-env.ikpje5mqwr.us-east-1.elasticbeanstalk.com/api/projects/getProjectMetaData/${this.state.projectId}`, {
-                method: 'post',
+                method: "POST",
+                credentials: "include",
             }).then(result => {
                 return result.json()
             }).then(response => {         
@@ -36,11 +38,11 @@ class Edit extends Component {
                 });
             }).catch(e => console.log(e));
         });     
-    }
+    };
 
     handleChange(event) {
         this.setState({ [event.target.name] : event.target.value })
-    }
+    };
 
     handleProjectEdit(event) {
         event.preventDefault();
@@ -57,22 +59,23 @@ class Edit extends Component {
         const sendData = JSON.stringify(editData)
 
         fetch('http://bccstem-env.ikpje5mqwr.us-east-1.elasticbeanstalk.com/api/projects/editProjectMeta', {            
-            method: 'POST',
+            method: "POST",
+            credentials: "include",
             headers: {
                 "Content-Type": "application/json; charset=utf-8"
             },
             body: sendData
         })
         .then(response => {
+            console.log(response.status)
             if (response.status !== 200) {
                 return console.log('error`')
             }
 
-            return this.props.history.push("/projects")
-            
+            return this.props.history.push("/projects")            
         })
         .catch(e => console.error(e));
-    }    
+    };
 
     render() {
         return (
@@ -83,16 +86,17 @@ class Edit extends Component {
                         <div className="form__item">
                             <label htmlFor="name" className="form__item-label">Name</label>
                             <input 
-                                type="text" 
+                                name="name"
+                                type="text"
                                 onChange={this.handleChange.bind(this)} 
                                 className="form__item-input" 
                                 value={this.state.name}
                             />
                         </div>
                         <div className="form__item">
-                            <label htmlFor="image" className="form__item-label">Image</label>
+                            <label htmlFor="primaryImage" className="form__item-label">Image</label>
                             <input 
-                                name="projectImage" 
+                                name="primaryImage" 
                                 type="text" 
                                 onChange={this.handleChange.bind(this)} 
                                 className="form__item-input" 

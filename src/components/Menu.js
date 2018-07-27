@@ -97,7 +97,7 @@ class Menu extends Component {
                         <NavLink
                             onClick={this.toggleMenu}
                             exact
-                            to="/benefits"
+                            to="/about"
                             className="menu__link"                            
                             activeClassName='menu__link--active'
                         >

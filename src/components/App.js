@@ -13,7 +13,7 @@ import Landing from './landing/Landing';
 import Scholars from './Scholars';
 import Contact from './Contact';
 import Calendar from './Calendar';
-import Benefits from './Benefits';
+import About from './About';
 import Projects from './projects/Projects';
 import New from './projects/New';
 import Project from './projects/Project';
@@ -64,7 +64,7 @@ class App extends Component {
               <Route path="/3sp" component={Scholars} />
               <Route path="/contact" component={Contact} />        
               <Route path="/calendar" component={Calendar} />
-              <Route path="/benefits" component={Benefits} />
+              <Route path="/about" component={About} />
               <Route exact path="/projects" component={Projects} />
               <Route exact path="/projects/a/new" component={New} />              
               <Route exact path={"/projects/:id"} component={Project} />

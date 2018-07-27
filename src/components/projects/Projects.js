@@ -90,7 +90,10 @@ class Projects extends Component {
                                         </li>                                
                                     )
                                 })
-                                : 'loading'
+                                : 
+                                <div>
+                                    <h1>Loading is cool</h1>
+                                </div>                            
                             }
                             <button onClick={this.toggleNav}>Close</button>
                         </ul>
@@ -99,7 +102,12 @@ class Projects extends Component {
                         {
                          this.state.loaded
                          ? this.state.projects.map(this.renderProjects)
-                         : 'loading'
+                         :
+                         <div>
+                            <div className="loading">
+                                <h1>Loading is cool</h1>
+                            </div> 
+                        </div>                         
                         }
                     </main>
                                          

@@ -9,7 +9,7 @@ import solar from '../images/solar.jpg';
 import algae from '../images/algae.jpg';
 import cchem from '../images/cchem.jpg';
 
-class Benefits extends Component {
+class About extends Component {
 
     render() {
         return (
@@ -117,4 +117,4 @@ class Benefits extends Component {
     }
 }
 
-export default Benefits;
+export default About;
