@@ -63,7 +63,14 @@ class Edit extends Component {
             },
             body: sendData
         })
-        .then(response => response.json())
+        .then(response => {
+            if (response.status !== 200) {
+                return console.log('error`')
+            }
+
+            return this.props.history.push("/projects")
+            
+        })
         .catch(e => console.error(e));
     }    
 
