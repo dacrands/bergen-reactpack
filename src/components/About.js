@@ -27,7 +27,10 @@ class About extends Component {
                                 <p>Work as a team with other students and faculty.</p>  
                             </div>                       
                             <div className={"box__img"}>
-                                <FadeIn height={500}>
+                                <div className="thumbnail--loader img-fluid">                                 
+                                    <div className="spinner--small spinner-1"></div>
+                                </div>  
+                                <FadeIn height={200}>
                                     {
                                         onload => (                                            
                                             <img
@@ -48,7 +51,10 @@ class About extends Component {
                                 <p>Access to academic support from STEM mentors, professors, and students.</p>
                             </div>                            
                             <div className="box__img">
-                                <FadeIn height={500}>
+                                <div className="thumbnail--loader img-fluid">                                 
+                                    <div className="spinner--small spinner-1"></div>
+                                </div>  
+                                <FadeIn height={200}>
                                     {
                                         onload => (
                                             <img
@@ -72,8 +78,11 @@ class About extends Component {
                                 <h2>Events</h2>
                                 <p>Please <a href="mailto:stemsummit@bergen.edu">email us</a> for a complete list of events.</p>
                             </div>                            
-                            <div className="box__img">                            
-                                <FadeIn height={500}>
+                            <div className="box__img"> 
+                                <div className="thumbnail--loader img-fluid">                                 
+                                    <div className="spinner--small spinner-1"></div>
+                                </div>                           
+                                <FadeIn height={200}>
                                     {
                                         onload => (
                                             <img

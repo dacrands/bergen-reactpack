@@ -57,7 +57,7 @@ class Project extends Component {
                         <div className="box__text box--center">
                             {this.state.desc}
                         </div>
-                        <div className="box__img">
+                        <div className="box--center">
                             <img src={this.state.image} alt="" className="img-fluid thumbnail"/>
                         </div>                        
                     </div>    

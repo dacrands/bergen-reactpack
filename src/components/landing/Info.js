@@ -11,52 +11,41 @@ class Info extends Component{
           Title: "About",
           Accent: "\u24D8",
           Desc: "At Bergen Community College, our mission is to provide our STEM students with the skills essential to success at 4-year institutions and beyond.",
-          LinkText: "Learn More\u25B8",
-          Link: "benefits"
+          LinkText: "Learn More \u25B8",
+          Link: "about"
         },
         {
           Title: "Research",
           Accent: "\u2699",
           Desc: "From rockets to algae biodiesel, Bergen Community college offers STEM students a wide variety of research opportunities.",
-          LinkText: "Student Projects\u25B8",
+          LinkText: "Student Projects \u25B8",
           Link: "projects"
         }, 
         {
           Title: "Join STEM",
           Accent: "\u2A1D",
-          Desc: "Learn some of the benefits of pursuing a career in Science, Technology, Engineering, and Mathematics. ",
-          LinkText: "Benefits of STEM\u25B8",
+          Desc: "Interested in joining a research project or submitting your own research proposal? Let us know!",
+          LinkText: "Contact us \u25B8",
           Link: "contact"
         }
       ]
     }
-  }
+  };
 
   render(){
-    let iterate = 0;
     return(
       <div className="info">
-        {this.state.Info.map(x => {
-          iterate++;
+        {this.state.Info.map((info, index) => {
           return (
-            <div key={iterate} className="info__content">
-            {/* {iterate % 2 === 0 ? <span>&#8942;</span> : <span>&#8943;</span>} */}
-              <div>
-              <span>{x.Accent}</span>
-                <h2>{x.Title}</h2>
-                
-                </div>      
-              
-              <p>{x.Desc}</p>
-              <Link className="info__link" to={x.Link}>{x.LinkText}</Link>
-
-              <div>
-              
-              </div>
-              
-            </div>
-            
-          )
+            <div key={index} className="info__content">            
+              <div>                
+                <span>{info.Accent}</span>
+                <h2>{info.Title}</h2>                
+              </div>                    
+              <p>{info.Desc}</p>
+              <Link className="info__link" to={info.Link}>{info.LinkText}</Link>              
+            </div>            
+          );
         })}
       </div>
     )

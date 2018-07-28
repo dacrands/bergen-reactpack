@@ -47,7 +47,7 @@ class Projects extends Component {
         .then(
             setTimeout(()=> {
                 return this.setState({ loaded:true });
-            }, 100)
+            }, 50)
         )
         .catch(e => console.log(e));
 
@@ -122,7 +122,7 @@ class Projects extends Component {
                 </section>
                 <button
                     onClick={this.toggleNav} 
-                    className="projects__button form__button--dark"
+                    className="projects__button form__button"
                 >
                 &#8801;
                 </button>              

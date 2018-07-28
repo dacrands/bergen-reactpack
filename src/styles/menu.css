@@ -265,7 +265,7 @@ MENU MEDIA
     }
     .menu__dropdown {
         margin-top: 50px;
-        max-width: min-content;
+        /* max-width: min-content; */
         left: 0;
     }
 

@@ -104,15 +104,6 @@ h2, h3, h4, h5 {
     background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(135deg, #e5eaeb, #a2a8ad); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
-.thumb--loader {
-    /* width: 100%;
-    height: 100%;
-    max-width: 500px; */
-    
-    background: #8e9eab;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(135deg, #e5eaeb, #a2a8ad); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
 
 .thumbnail {
     max-width: 300px;    
@@ -123,13 +114,32 @@ h2, h3, h4, h5 {
     background: var(--light);    
 }
 
+.thumbnail--loader {
+    /* width: 100%;
+    height: 100%;*/
+    position: absolute;
+    max-width: 280px;
+    max-height: 100px;
+    padding: 5px;
+    z-index: -2;
+    align-self: center;
+    
+}
+
+
+
 .shadow {
     box-shadow: 0 3px 12px rgba(0,0,0,0.2);
 }
 
 
 /* ----------------------
-        LOADER
+LOADER
+
+This loader courtesy of devtips,
+I suggest you look at some of his vids!
+
+https://www.youtube.com/watch?v=lQxt6TdzsAo
 ---------------------- */
 .loading  {
     height: 80vh;
@@ -147,6 +157,16 @@ h2, h3, h4, h5 {
     position: relative;
     margin: 50px;
     display: inline-block;
+}
+
+.spinner--small {
+    position: absolute;
+    top: 50%;
+    margin-left: 50%;
+    margin-top: -25px;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
 }
 
 .spinner-1 {
