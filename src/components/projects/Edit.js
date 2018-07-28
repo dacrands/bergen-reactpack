@@ -8,16 +8,20 @@ class Edit extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            name: null,
-            desc: null,
-            primaryImage: null,
-            projectId: null,
-            advisor: null,
-            team: null,
+            name: "",
+            desc: "",
+            projectId: "",
+            advisor: "",
+            team: "",
+            times: "",
+            contact: "",
         }
     };
 
     componentDidMount() {
+        document.body.style.background = "#dadada"
+
+
         const projectId = this.props.match.params.id;
         this.setState({ projectId });
 
@@ -40,6 +44,10 @@ class Edit extends Component {
         });     
     };
 
+    componentWillUnmount() {
+        document.body.style.background = ""
+    };
+
     handleChange(event) {
         this.setState({ [event.target.name] : event.target.value })
     };
@@ -57,6 +65,9 @@ class Edit extends Component {
         }
 
         const sendData = JSON.stringify(editData)
+
+        console.log(typeof sendData);
+        console.log(sendData);
 
         fetch('http://bccstem-env.ikpje5mqwr.us-east-1.elasticbeanstalk.com/api/projects/editProjectMeta', {            
             method: "POST",
@@ -104,6 +115,17 @@ class Edit extends Component {
                             />
                         </div>
                         <div className="form__item">
+                            <label htmlFor="contact" className="form__item-label">Contact</label>
+                            <input 
+                                name="contact" 
+                                type="email" 
+                                onChange={this.handleChange.bind(this)} 
+                                className="form__item-input" 
+                                placeholder="e.g., student@bergen.edu"
+                                value={this.state.contact}                                
+                            />
+                        </div>
+                        <div className="form__item">
                             <label htmlFor="adivsor" className="form__item-label">Advisor</label>
                             <input 
                                 name="advisor" 
@@ -121,6 +143,22 @@ class Edit extends Component {
                                 onChange={this.handleChange.bind(this)} 
                                 className="form__item-input" 
                                 value={this.state.team}
+                                placeholder="e.g., Lise Meitner, Enrico Fermi, Robert Oppenheimer"
+                                aria-describedby="teamDesc"
+                            />
+                            <span className={"form__desc"} id="teamDesc">Place a comma between names</span>
+                        </div>
+                        <div className="form__item">
+                            <label htmlFor="times" className="form__item-label">
+                                Meeting place and time
+                            </label>
+                            <input 
+                                name="times" 
+                                type="text" 
+                                onChange={this.handleChange.bind(this)} 
+                                className="form__item-input" 
+                                placeholder="e.g., Lab room from noon to 3"
+                                value={this.state.meeting}
                             />
                         </div>
                         <div className="form__item">

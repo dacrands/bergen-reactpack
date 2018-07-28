@@ -35,15 +35,23 @@ class Projects extends Component {
     componentDidMount() {
         fetch('http://bccstem-env.ikpje5mqwr.us-east-1.elasticbeanstalk.com/api/projects/getAllProjectMeta', {
             method: 'post',
-        }).then(result => {
+        })
+        .then(result => {
             return result.json()
-        }).then((response) => {            
-            this.setState({
-                loaded:true, 
+        })
+        .then((response) => {            
+            this.setState({                
                 projects: response
             });
-        }).catch(e => console.log(e));
+        })
+        .then(
+            setTimeout(()=> {
+                return this.setState({ loaded:true });
+            }, 100)
+        )
+        .catch(e => console.log(e));
 
+        
         //------------------
         // This is removes the overlay
         // on resize 
@@ -79,8 +87,8 @@ class Projects extends Component {
                 <div className={this.state.showNav ? "projects--overlay" : ""} onClick={this.toggleNav}></div>
                 <section className="projects">
                     <nav className={this.state.showNav ? "projects__nav projects__nav--show" : "projects__nav"}>                    
-                        <ul>
-                            <h2>Projects</h2>                            
+                        <h2 className={"text--center"}>Projects</h2>  
+                        <ul>                                                      
                             {
                                 this.state.loaded
                                 ? this.state.projects.map(project => {
@@ -104,8 +112,8 @@ class Projects extends Component {
                          ? this.state.projects.map(this.renderProjects)
                          :
                          <div>
-                            <div className="loading">
-                                <h1>Loading is cool</h1>
+                            <div className="loading absolute--cover">
+                                <div className="spinner spinner-1"></div>
                             </div> 
                         </div>                         
                         }

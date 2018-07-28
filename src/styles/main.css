@@ -128,13 +128,46 @@ h2, h3, h4, h5 {
 }
 
 
-
+/* ----------------------
+        LOADER
+---------------------- */
 .loading  {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    height: 100vh;
-    background: #000;
+    height: 80vh;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner {
+    width: 100px;
+    height: 100px;
+    background: #eee;
+    border-radius: 50%;
+    position: relative;
+    margin: 50px;
+    display: inline-block;
+}
+
+.spinner-1 {
+    /* position: absolute; */
+    top: -4px;
+    left: -4px;
+    border: 4px solid transparent;
+    border-top-color: var(--primary);
+    border-bottom-color: var(--primary);
+    animation: spinny 800ms linear infinite;
+}
+  
+  
+@keyframes spinny {
+    0% {
+        transform: rotate(0deg) scale(1)
+    }
+    50% {
+        transform: rotate(45deg) scale(1.2)
+    }    
+    100% {
+        transform: rotate(360deg) scale(1)
+    }    
 }

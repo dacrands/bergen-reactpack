@@ -15,13 +15,13 @@ class New extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            name: null,
-            desc: null,
-            projectId: null,
-            advisor: null,
-            team: null,
-            times: null,
-            contact: null,
+            name: "",
+            desc: "",
+            projectId: "",
+            advisor: "",
+            team: "",
+            times: "",
+            contact: "",
         }
     }
 
@@ -77,7 +77,7 @@ class New extends Component {
                                 onChange={this.handleChange.bind(this)} 
                                 className="form__item-input" 
                                 value={this.state.primaryImage}
-                                ariaDescribedBy="imageDesc"                                
+                                aria-describedby="imageDesc"                                
                             />
                             <span class={"form__desc"} id="imageDesc">This should be an imgur link</span>
                         </div>
@@ -110,10 +110,10 @@ class New extends Component {
                                 onChange={this.handleChange.bind(this)} 
                                 className="form__item-input" 
                                 value={this.state.team}
-                                placeholder="e.g., Lise Meitner; Enrico Fermi; Robert Oppenheimer"
-                                ariaDescribedBy="teamDesc"
+                                placeholder="e.g., Lise Meitner, Enrico Fermi, Robert Oppenheimer"
+                                aria-describedby="teamDesc"
                             />
-                            <span class={"form__desc"} id="teamDesc">Place a semicolon between names</span>
+                            <span className={"form__desc"} id="teamDesc">Place a comma between names</span>
                         </div>
                         <div className="form__item">
                             <label htmlFor="times" className="form__item-label">
