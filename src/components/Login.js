@@ -26,7 +26,7 @@ class Login extends Component {
         const data = new FormData(event.target);  
         let stringData = stringifyFormData(data);
 
-        fetch('http://bccstem-env.ikpje5mqwr.us-east-1.elasticbeanstalk.com/api/users/login', {            
+        fetch('https://www.bergenstem.com/api/users/login', {            
             method: "POST",
             credentials: "include",
             headers: {
