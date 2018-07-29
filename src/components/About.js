@@ -10,7 +10,6 @@ import algae from '../images/algae.jpg';
 import cchem from '../images/cchem.jpg';
 
 class About extends Component {
-
     render() {
         return (
             <div>

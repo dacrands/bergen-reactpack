@@ -12,6 +12,12 @@
     /* background: var(--light); */
 }
 
+.info svg {
+    height: 100px;
+    width: 100px;
+    fill: var(--primary-light)
+}
+
 .info__content h2 {
     /* outline: 3px solid red; */
     /* max-width: min-content; */

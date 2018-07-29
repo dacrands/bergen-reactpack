@@ -86,7 +86,7 @@ class Menu extends Component {
                         className="menu__logo-link"
                         activeClassName='menu__link--active'
                     >                        
-                        STEM                        
+                        <Logo />                    
                     </NavLink>
                 </div>
                 <ul
