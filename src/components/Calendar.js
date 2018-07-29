@@ -130,7 +130,7 @@ class MyCalendar extends Component {
                 <div className="container" style={{margin: "30px auto"}}>
                     <BigCalendar
                         defaultDate={new Date()}
-                        defaultView="month"
+                        defaultView="agenda"
                         events={this.state.events}
                         style={{ height: "100vh" }}
                         onSelectEvent={event => alert(`${event.title} \n START: ${event.start} \n END: ${event.end}`)}
