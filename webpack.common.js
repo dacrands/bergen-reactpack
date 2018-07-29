@@ -12,7 +12,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Bergen STEM',
       meta: {viewport: 'width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0'},
-      favicon: './src/images/bcc-favicon.ico'
+      favicon: './src/images/bcc-favicon.ico',
     }),
   ],
   output: {

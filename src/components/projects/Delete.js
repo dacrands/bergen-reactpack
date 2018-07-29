@@ -23,7 +23,7 @@ class Delete extends Component {
 
         // Throw the fetch into the task queue so we can setState
         setTimeout(()=> {
-            fetch(`http://bccstem-env.ikpje5mqwr.us-east-1.elasticbeanstalk.com/api/projects/removeProjects`, {
+            fetch(`https://www.bergenstem.com/api/projects/removeProjects`, {
                 method: 'POST',
                 headers: {
                     "Content-Type": "application/json; charset=utf-8"

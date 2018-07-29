@@ -24,7 +24,7 @@ class Project extends Component {
         const projectId = this.props.match.params.id;
         this.setState({ projectId });
         setTimeout(()=> {
-            fetch(`http://bccstem-env.ikpje5mqwr.us-east-1.elasticbeanstalk.com/api/projects/getProjectMetaData/${this.state.projectId}`, {
+            fetch(`https://www.bergenstem.com/api/projects/getProjectMetaData/${this.state.projectId}`, {
                 method: 'post',
             }).then(result => {
                 return result.json()
@@ -124,7 +124,7 @@ class Project extends Component {
                     <Link to="/projects">&#8672; Back</Link>               
                 </main>
 
-                <Blog meeting={"Lab room form 9 to 6"} contact={"student@email.com"} />                
+                {/* <Blog meeting={"Lab room form 9 to 6"} contact={"student@email.com"} />                 */}
             </div>
         );
     }

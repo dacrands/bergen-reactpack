@@ -38,7 +38,7 @@ class New extends Component {
         const data = new FormData(event.target);  
         let stringData = stringifyFormData(data);
         
-        fetch('http://bccstem-env.ikpje5mqwr.us-east-1.elasticbeanstalk.com/api/projects/createNewProject', {            
+        fetch('https://www.bergenstem.com/api/projects/createNewProject', {            
             method: 'POST',
             headers: {
                 "Content-Type": "application/json; charset=utf-8"
