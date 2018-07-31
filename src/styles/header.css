@@ -23,12 +23,12 @@
 
     /* color: var(--primary-light); */
 
-    min-height: 33vh;
+    min-height: 35vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0 20px;
+    padding: 0 1em;
     
     /* box-shadow: 0 0 4px rgba(0, 0, 0, 0.3); */
 

@@ -10,7 +10,7 @@ class About extends Component {
                 <div className="container">
                     <div className="title">
                         <h1>About</h1>
-                        <hr className="hr"/>
+                        {/* <hr className="hr"/> */}
                     </div>                
                     <div className="box">
                         
@@ -113,7 +113,7 @@ class About extends Component {
 
                     <div className="title">
                         <h1>Requirements</h1>
-                        <hr className="hr"/>
+                        {/* <hr className="hr"/> */}
                     </div>  
                     <div className="box box--block">
                         <div className="box__content">
@@ -168,7 +168,7 @@ class About extends Component {
                     ============ */}
                     <div className="title">
                         <h1>3SP Program Elements</h1>
-                        <hr className="hr"/>
+                        {/* <hr className="hr"/> */}
                     </div>
                     <div className="box">
                         <div className="box__content">

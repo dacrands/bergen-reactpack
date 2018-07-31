@@ -139,6 +139,7 @@ class Menu extends Component {
                         <a
                                     className="menu__dropdown-link"
                                     href="https://bergen.edu/faculty-staff/grants-administration/awards/stem/running-start-program/"
+                                    target="_blank"
                                 >
                                     Running Start Program
                           </a>
@@ -147,6 +148,7 @@ class Menu extends Component {
                         <a
                                     className="menu__dropdown-link"
                                     href="http://bergen.edu/stemsummit"
+                                    target="_blank"
                                 >
                                     STEM Summit
                           </a>

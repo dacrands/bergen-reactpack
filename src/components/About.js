@@ -17,7 +17,7 @@ class About extends Component {
                 <div className="container">
                     <div className="title">
                         <h1>Why study STEM at Bergen?</h1>
-                        <hr className="hr" />
+                        {/* <hr className="hr" /> */}
                     </div>                    
                     <div className="box">
                         <div className="box__item">
@@ -26,7 +26,7 @@ class About extends Component {
                                 <p>Work as a team with other students and faculty.</p>  
                             </div>                       
                             <div className={"box__img"}>
-                                <div className="thumbnail--loader img-fluid">                                 
+                                <div className="thumbnail--loader img-fluid">                             
                                     <div className="spinner--small spinner-1"></div>
                                 </div>  
                                 <FadeIn height={200}>

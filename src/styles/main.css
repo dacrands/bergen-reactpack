@@ -10,9 +10,9 @@
     --primary-dark: #1a075ee6;
     --primary-dark-bg: hsl(253, 100%, 23%);
     --primary: #3f19c7f1;
-    --primary-bg: hsl(253, 100%, 50%);
+    --primary-bg: hsl(253, 100%, 26%);
     --primary-light: #3e1fadf1;
-    --primary-light-bg: hsl(253, 100%, 40%);
+    --primary-light-bg: hsl(253, 100%, 46%);
     --light: #f1f1f1;
     --dark: #424040;
     --med: #575252;
@@ -56,9 +56,16 @@ a:link:hover {
     text-decoration: underline;    
 }
 
+.button--back {
+    margin: 1em;
+}
 
-h2, h3, h4, h5 {
-    color: var(--dark);
+
+h2, 
+h3,
+h4,
+h5 {
+    color: var(--med);
     font-weight: bold;
 }
 
@@ -101,9 +108,9 @@ h2, h3, h4, h5 {
     /* width: 100%;
     height: 100%;
     max-width: 500px; */
-    background: #8e9eab;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(135deg, #e5eaeb, #a2a8ad); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #8e9eab; 
+    background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);
+    background: linear-gradient(135deg, #e5eaeb, #a2a8ad);
 }
 
 .thumbnail {
@@ -121,9 +128,11 @@ h2, h3, h4, h5 {
     position: absolute;
     max-width: 280px;
     max-height: 100px;
+    height: 100%;
     padding: 5px;
     z-index: -2;
     align-self: center;
+    /* background: #eee; */
     
 }
 
@@ -159,6 +168,7 @@ https://www.youtube.com/watch?v=lQxt6TdzsAo
     margin: 50px;
     display: inline-block;
 }
+
 
 .spinner--small {
     position: absolute;

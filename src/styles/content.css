@@ -12,12 +12,12 @@
 .content > div {
     /* outline:1px red solid; */
     /* flex:1 1 auto; */
-    margin: 1.5rem;  
+    margin: 2rem;  
 }
 
 .content h1 {    
     color: var(--primary-light);
-    font-weight: 100;
+    /* font-weight: 100; */
     font-size: 2.3rem;    
 }
 
