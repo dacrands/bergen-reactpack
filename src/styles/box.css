@@ -8,6 +8,9 @@
 .hr--light {
     background-color: white;
 }
+.hr--primary {
+    background-color: var(--primary-dark);
+}
 
 .title {
     padding: 0 2%;

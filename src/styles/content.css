@@ -120,8 +120,20 @@ nothing other than alter color schemes.
 }
 
 .content--dark {
-    background: #e7e7ee;
+    background: #1b1b1b;
     /* background: #B0B0BA; */
+}
+
+.content--dark  .content{
+    min-height: 30vh;    
+}
+
+.content--dark h1 {
+    color: var(--light);
+}
+
+.content--dark h3 {
+    color: var(--comp);
 }
 
 .content--pattern {

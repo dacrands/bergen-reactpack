@@ -20,10 +20,10 @@
 
 .form--dark {
     background: linear-gradient(45deg, var(--primary-light),  var(--primary-dark));
+    
     color: var(--comp);
+    color: var(--light);
 }
-
-
 
 .form__item {
     display: flex;
@@ -84,6 +84,7 @@
 
 .form__button--dark {
     background: var(--comp);
+    
     /* background: linear-gradient(to bottom, var(--comp), rgb(212, 157, 4)); */
     color: var(--dark);
 }
@@ -94,6 +95,28 @@
     color: var(--dark);
 }
 
+
+.form__one {
+    display: flex;    
+    justify-content: center;  
+    
+}
+
+.form__one .form__item {
+    justify-content: center;    
+}
+
+.form__one .form__item-input {
+    margin: 0;
+    border-radius: 5px 0 0 5px;
+    font-size: 1.3rem;
+    padding: 8px;
+    max-width: 80%;
+}
+
+.form__one .form__button {
+    border-radius: 0 5px 5px 0;
+}
 
 .err {
     background: red;

@@ -98,7 +98,7 @@ class Content extends Component {
                 </div>
 
                  {/* CONTENT */}
-                 <div className="content--primary">
+                 <div className="content--dark">
                     <div className="content">
                         <div className="content__text">
                             <h1>Interested in research?</h1>
@@ -106,7 +106,8 @@ class Content extends Component {
                         </div>
 
                         <div className="content__form">
-                            <form action="" className="form">
+                                {/* OLD FORM */}
+                            {/* <form action="" className="form">
                                 <div className="form__item">
                                     <label htmlFor="email" className="form__item-label">Email</label>
                                     <input type="text" className="form__item-input" />
@@ -130,7 +131,24 @@ class Content extends Component {
                                 </div>                        
                                 <button className="form__button form__button--dark">
                                     Submit
-                                </button>                        
+                                </button>                         */}
+
+
+
+
+                            <form action="" className="form">
+                                
+                                    <div className="form__item">
+                                    {/* <label htmlFor="email" className="form__item-label">Email</label> */}
+                                        <div className="form__one">
+                                        
+                                        <input placeholder="Please enter an email" type="text" className="form__item-input" />
+                                                                                                            
+                                    <button className="form__button form__button--dark">
+                                        Submit
+                                    </button>                        
+                                    </div>
+                                </div>                                
                             </form>  
                         </div> 
                     </div>                    
