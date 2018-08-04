@@ -24,7 +24,7 @@ class Project extends Component {
         const projectId = this.props.match.params.id;
         this.setState({ projectId });
         setTimeout(()=> {
-            fetch(`http://bccstem-env.ikpje5mqwr.us-east-1.elasticbeanstalk.com/api/projects/getProjectMetaData/${this.state.projectId}`, {
+            fetch(`https://www.bergenstem.com/api/projects/getProjectMetaData/${this.state.projectId}`, {
                 method: 'post',
             }).then(result => {
                 return result.json()
@@ -36,6 +36,7 @@ class Project extends Component {
                     advisors: response.advisor,
                     team: response.team,
                 });
+                // This will redirect to err comp
             }).catch(e => console.log(e));
         });     
     }
@@ -51,20 +52,20 @@ class Project extends Component {
                 <main className="container project">
                     <div className="title">
                         <h1>The Project</h1>
-                        <hr className="hr"/>
+                        {/* <hr className="hr"/> */}
                     </div>
                     <div className="box">
-                        <div className="box__text box--center">
+                        <div className="box__text">
                             {this.state.desc}
                         </div>
-                        <div className="box__img">
+                        <div className="box--center">
                             <img src={this.state.image} alt="" className="img-fluid thumbnail"/>
                         </div>                        
                     </div>    
 
                     <div className="title">
                         <h1>The Team</h1>
-                        <hr className="hr"/>
+                        {/* <hr className="hr"/> */}
                     </div>
 
                     <div className="box">
@@ -121,10 +122,10 @@ class Project extends Component {
                             </div>
                         </div>
                     </div>
-                    <Link to="/projects">&#8672; Back</Link>               
+                    <Link className="button--back" to="/projects">&#8672; Back</Link>               
                 </main>
 
-                <Blog meeting={"Lab room form 9 to 6"} contact={"student@email.com"} />                
+                {/* <Blog meeting={"Lab room form 9 to 6"} contact={"student@email.com"} />                 */}
             </div>
         );
     }

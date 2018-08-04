@@ -45,7 +45,7 @@ class Content extends Component {
                                 proficiency exam after completing the boot camp and possibly
                                 test out of the course.
                             </p>
-                            <a href="https://bergen.edu/faculty-staff/grants-administration/awards/stem/running-start-program/">Running Start Program{'\u25B8'}</a>
+                            <a href="https://bergen.edu/faculty-staff/grants-administration/awards/stem/running-start-program/">Running Start Program {'\u25B8'}</a>
                         </div>                        
                     </div>                                    
                 </div>
@@ -76,7 +76,7 @@ class Content extends Component {
                                 to ensure their success in securing research internships and successful
                                 transfer to their targeted 4-year institution.
                             </p>
-                            <Link to="/3sp">Learn More{'\u25B8'}</Link>
+                            <Link to="/3sp">Learn More {'\u25B8'}</Link>
                         </div>
                     </div>
                 </div>                                                                                   
@@ -93,30 +93,21 @@ class Content extends Component {
                                 Listen to BCC students discuss their
                                 experiences in the STEM program. 
                             </h3>
-                            {/* <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, quo id culpa perferendis explicabo recusandae rem inventore 
-                                fugiat assumenda veniam necessitatibus totam tempora beatae. 
-                                Earum consequatur dolorum itaque non rerum quam suscipit tempora minima modi nihil repellendus, unde nisi similique?
-                            </p> */}
                         </div>
                     </div>                                     
                 </div>
 
                  {/* CONTENT */}
-                 <div className="content--primary">
+                 <div className="content--dark">
                     <div className="content">
                         <div className="content__text">
                             <h1>Interested in research?</h1>
                             <h3>Sign up for our newsletter!</h3>
-                            {/* <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Maxime error voluptatibus unde cumque autem vitae praesentium. 
-                                Voluptatum cupiditate dolor vitae?
-                            </p>                     */}
                         </div>
 
                         <div className="content__form">
-                            <form action="" className="form">
+                                {/* OLD FORM */}
+                            {/* <form action="" className="form">
                                 <div className="form__item">
                                     <label htmlFor="email" className="form__item-label">Email</label>
                                     <input type="text" className="form__item-input" />
@@ -140,7 +131,24 @@ class Content extends Component {
                                 </div>                        
                                 <button className="form__button form__button--dark">
                                     Submit
-                                </button>                        
+                                </button>                         */}
+
+
+
+
+                            <form action="" className="form">
+                                
+                                    <div className="form__item">
+                                    {/* <label htmlFor="email" className="form__item-label">Email</label> */}
+                                        <div className="form__one">
+                                        
+                                        <input placeholder="Please enter an email" type="text" className="form__item-input" />
+                                                                                                            
+                                    <button className="form__button form__button--dark">
+                                        Submit
+                                    </button>                        
+                                    </div>
+                                </div>                                
                             </form>  
                         </div> 
                     </div>                    

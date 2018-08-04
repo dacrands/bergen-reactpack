@@ -83,7 +83,7 @@ class Blog extends Component {
     }
 
     componentDidMount() {
-        fetch('http://bccstem-env.ikpje5mqwr.us-east-1.elasticbeanstalk.com/api/projects/getAllProjectMeta', {
+        fetch('https://www.bergenstem.com/api/projects/getAllProjectMeta', {
             method: 'post',
         }).then(result => {
             return result.json()

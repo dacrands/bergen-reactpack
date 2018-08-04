@@ -4,7 +4,8 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 65vh;       
+    height: 55vh;   
+    /* background: #000; */
     /* background: var(--primary-light); */
 }
 
@@ -18,7 +19,7 @@
 }
 
 #myCanvas{
-    height: 65vh;
+    height: 55vh;
     width: 100%;
     margin: 0;
     position: absolute;
@@ -28,7 +29,7 @@
     z-index: -1;
     background: var(--primary-light);    
     background: -webkit-linear-gradient(-45deg, var(--primary-dark), var(--primary-light));  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(-45deg, var(--primary-dark), var(--primary-light)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(-45deg, var(--primary-dark), var(--primary-light));
     
     /* transform: rotateX(10deg); */
 }

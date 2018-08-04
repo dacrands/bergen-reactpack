@@ -9,8 +9,7 @@ import solar from '../images/solar.jpg';
 import algae from '../images/algae.jpg';
 import cchem from '../images/cchem.jpg';
 
-class Benefits extends Component {
-
+class About extends Component {
     render() {
         return (
             <div>
@@ -18,7 +17,7 @@ class Benefits extends Component {
                 <div className="container">
                     <div className="title">
                         <h1>Why study STEM at Bergen?</h1>
-                        <hr className="hr" />
+                        {/* <hr className="hr" /> */}
                     </div>                    
                     <div className="box">
                         <div className="box__item">
@@ -27,7 +26,10 @@ class Benefits extends Component {
                                 <p>Work as a team with other students and faculty.</p>  
                             </div>                       
                             <div className={"box__img"}>
-                                <FadeIn height={500}>
+                                <div className="thumbnail--loader img-fluid">                             
+                                    <div className="spinner--small spinner-1"></div>
+                                </div>  
+                                <FadeIn height={200}>
                                     {
                                         onload => (                                            
                                             <img
@@ -48,7 +50,10 @@ class Benefits extends Component {
                                 <p>Access to academic support from STEM mentors, professors, and students.</p>
                             </div>                            
                             <div className="box__img">
-                                <FadeIn height={500}>
+                                <div className="thumbnail--loader img-fluid">                                 
+                                    <div className="spinner--small spinner-1"></div>
+                                </div>  
+                                <FadeIn height={200}>
                                     {
                                         onload => (
                                             <img
@@ -72,8 +77,11 @@ class Benefits extends Component {
                                 <h2>Events</h2>
                                 <p>Please <a href="mailto:stemsummit@bergen.edu">email us</a> for a complete list of events.</p>
                             </div>                            
-                            <div className="box__img">                            
-                                <FadeIn height={500}>
+                            <div className="box__img"> 
+                                <div className="thumbnail--loader img-fluid">                                 
+                                    <div className="spinner--small spinner-1"></div>
+                                </div>                           
+                                <FadeIn height={200}>
                                     {
                                         onload => (
                                             <img
@@ -117,4 +125,4 @@ class Benefits extends Component {
     }
 }
 
-export default Benefits;
+export default About;

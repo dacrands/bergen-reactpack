@@ -7,8 +7,16 @@
     display: grid;        
     grid-template-columns: min-content 1fr;
     padding: 0 1vw;
+    background: #222;
     background: var(--primary-dark);
+    /* background: var(--light); */
     transition: all 250ms ease-in;
+}
+
+.menu svg {
+    color: var(--light);
+    height: 1.5em;
+    fill: var(--light);
 }
 
 .menu__list a:link:hover,
@@ -29,6 +37,7 @@ until loogo
     font-size: 1.5rem;
     font-weight: bold;
     color: var(--light);
+    /* color: var(--primary-dark); */
 }
 
 /* ----------------------------------
@@ -44,6 +53,7 @@ Send the ul to the end of the nav
     align-items: center;   
     list-style: none; 
     color: var(--light);
+    /* color: var(--primary-dark); */
 }
 
 /* ----------------------------------
@@ -62,8 +72,9 @@ Transition for color change.
 .menu__button {
     /* outline: 2px solid green;     */
     /* height: 100%; */
-    padding: 5px;    
+    /* padding: 5px;     */
     color: var(--light);
+    /* color: var(--primary-dark); */
     text-decoration: none;
     transition: all 200ms linear;  
 }
@@ -74,8 +85,10 @@ Transition for color change.
 }
 
 .menu__logo .menu__link--active,
+.menu__logo .menu__link--active svg,
 .menu__list .menu__link--active {
     color: var(--comp);
+    fill: var(--comp);
 }
 
 .menu__link--active:hover {
@@ -265,8 +278,12 @@ MENU MEDIA
     }
     .menu__dropdown {
         margin-top: 50px;
-        max-width: min-content;
+        /* max-width: min-content; */
         left: 0;
+    }
+
+    .menu__dropdown-link {
+        display: block;
     }
 
 }

@@ -24,6 +24,15 @@ class Footer extends Component {
                     <p className="lead">Follow Us!</p>
                     <a className="footer__item-link" href="https://www.facebook.com/bergen.stem">Facebook</a>
                     <a className="footer__item-link" href="https://www.instagram.com/bergen_stem/">Instagram</a>
+                    {/* <hr className="hr hr--primary"/> */}
+                    
+                </div>
+                <div className="footer__item">
+                    <p className="lead">STEM Club</p>
+                    <Link className="footer__item-link" to="/login">Login</Link>                    
+                    <Link className="footer__item-link" to="/register">Register</Link>           
+                    {/* <a className="footer__item-link" href="https://www.facebook.com/bergen.stem">Facebook</a>
+                    <a className="footer__item-link" href="https://www.instagram.com/bergen_stem/">Instagram</a> */}
                 </div>
             </footer>
         )

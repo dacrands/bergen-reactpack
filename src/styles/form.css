@@ -5,6 +5,12 @@
     padding: 20px;
     margin-bottom: 50px;
     border-radius: 14px;
+    color: var(--primary-dark)
+}
+
+.form__desc {
+    font-size: 0.8rem;
+    color: var(--med);
 }
 
 .form--height {
@@ -14,16 +20,17 @@
 
 .form--dark {
     background: linear-gradient(45deg, var(--primary-light),  var(--primary-dark));
+    
     color: var(--comp);
+    color: var(--light);
 }
-
-
 
 .form__item {
     display: flex;
     flex-direction: column;
-    margin: 15px 0;
+    margin: 1.5em 0;
     font-size: 1.2rem;
+    
 }
 
 .form__item input,
@@ -57,7 +64,7 @@
 
 .form__button {
     background: #00a5ff;
-    background: linear-gradient(to bottom, #2ab1fa, #02689e);
+    /* background: linear-gradient(to bottom, #2ab1fa, #02689e); */
     width: min-content;
     border: none;
     border-radius: 5px;
@@ -71,25 +78,54 @@
 .form__button:hover {
     cursor: pointer;
     /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); */
-    background: #006da8;
-    background: linear-gradient(to bottom, #199ee6, #024f79);
+    background: #047dbe;
+    /* background: linear-gradient(to bottom, #199ee6, #024f79); */
 }
 
 .form__button--dark {
     background: var(--comp);
-    background: linear-gradient(to bottom, var(--comp), rgb(212, 157, 4));
+    
+    /* background: linear-gradient(to bottom, var(--comp), rgb(212, 157, 4)); */
     color: var(--dark);
 }
 
 .form__button--dark:hover {
-    background: var(--comp);
-    background: linear-gradient(to bottom, var(--comp), rgb(143, 105, 0));
+    background: rgb(212, 157, 4);
+    /* background: linear-gradient(to bottom, var(--comp), rgb(143, 105, 0)); */
     color: var(--dark);
 }
 
+
+.form__one {
+    display: flex;    
+    justify-content: center;  
+    
+}
+
+.form__one .form__item {
+    justify-content: center;    
+}
+
+.form__one .form__item-input {
+    margin: 0;
+    border-radius: 5px 0 0 5px;
+    font-size: 1.3rem;
+    padding: 8px;
+    max-width: 80%;
+}
+
+.form__one .form__button {
+    border-radius: 0 5px 5px 0;
+}
 
 .err {
     background: red;
     color: #dadada;
     text-align: center;
+}
+
+@media (max-width: 520px) {
+    .form__container {
+        max-width: 94%;
+    }
 }

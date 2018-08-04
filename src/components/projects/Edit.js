@@ -8,23 +8,28 @@ class Edit extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            name: null,
-            desc: null,
-            projectId: null,
-            advisor: null,
-            team: null,
+            name: "",
+            desc: "",
+            projectId: "",
+            advisor: "",
+            team: "",
+            times: "",
+            contact: "",
         }
-    }    
+    };
 
     componentDidMount() {
+        document.body.style.background = "#dadada"
+
+
         const projectId = this.props.match.params.id;
         this.setState({ projectId });
 
         // Throw the fetch into the task queue so we can setState
         setTimeout(()=> {
-            fetch(`http://bccstem-env.ikpje5mqwr.us-east-1.elasticbeanstalk.com/api/projects/getProjectMetaData/${this.state.projectId}`, {
+            fetch(`https://www.bergenstem.com/api/projects/getProjectMetaData/${this.state.projectId}`, {
                 method: "POST",
-                credentials: "include"
+                credentials: "include",
             }).then(result => {
                 return result.json()
             }).then(response => {         
@@ -37,11 +42,15 @@ class Edit extends Component {
                 });
             }).catch(e => console.log(e));
         });     
-    }
+    };
+
+    componentWillUnmount() {
+        document.body.style.background = ""
+    };
 
     handleChange(event) {
         this.setState({ [event.target.name] : event.target.value })
-    }
+    };
 
     handleProjectEdit(event) {
         event.preventDefault();
@@ -57,16 +66,27 @@ class Edit extends Component {
 
         const sendData = JSON.stringify(editData)
 
+        console.log(typeof sendData);
+        console.log(sendData);
+
         fetch('http://bccstem-env.ikpje5mqwr.us-east-1.elasticbeanstalk.com/api/projects/editProjectMeta', {            
-            method: 'POST',
+            method: "POST",
+            credentials: "include",
             headers: {
                 "Content-Type": "application/json; charset=utf-8"
             },
             body: sendData
         })
-        .then(response => response.json())
+        .then(response => {
+            console.log(response.status)
+            if (response.status !== 200) {
+                return console.log('error`')
+            }
+
+            return this.props.history.push("/projects")            
+        })
         .catch(e => console.error(e));
-    }    
+    };
 
     render() {
         return (
@@ -77,20 +97,32 @@ class Edit extends Component {
                         <div className="form__item">
                             <label htmlFor="name" className="form__item-label">Name</label>
                             <input 
-                                type="text" 
+                                name="name"
+                                type="text"
                                 onChange={this.handleChange.bind(this)} 
                                 className="form__item-input" 
                                 value={this.state.name}
                             />
                         </div>
                         <div className="form__item">
-                            <label htmlFor="image" className="form__item-label">Image</label>
+                            <label htmlFor="primaryImage" className="form__item-label">Image</label>
                             <input 
-                                name="projectImage" 
+                                name="primaryImage" 
                                 type="text" 
                                 onChange={this.handleChange.bind(this)} 
                                 className="form__item-input" 
                                 value={this.state.primaryImage}
+                            />
+                        </div>
+                        <div className="form__item">
+                            <label htmlFor="contact" className="form__item-label">Contact</label>
+                            <input 
+                                name="contact" 
+                                type="email" 
+                                onChange={this.handleChange.bind(this)} 
+                                className="form__item-input" 
+                                placeholder="e.g., student@bergen.edu"
+                                value={this.state.contact}                                
                             />
                         </div>
                         <div className="form__item">
@@ -111,6 +143,22 @@ class Edit extends Component {
                                 onChange={this.handleChange.bind(this)} 
                                 className="form__item-input" 
                                 value={this.state.team}
+                                placeholder="e.g., Lise Meitner, Enrico Fermi, Robert Oppenheimer"
+                                aria-describedby="teamDesc"
+                            />
+                            <span className={"form__desc"} id="teamDesc">Place a comma between names</span>
+                        </div>
+                        <div className="form__item">
+                            <label htmlFor="times" className="form__item-label">
+                                Meeting place and time
+                            </label>
+                            <input 
+                                name="times" 
+                                type="text" 
+                                onChange={this.handleChange.bind(this)} 
+                                className="form__item-input" 
+                                placeholder="e.g., Lab room from noon to 3"
+                                value={this.state.meeting}
                             />
                         </div>
                         <div className="form__item">

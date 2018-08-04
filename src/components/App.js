@@ -13,11 +13,12 @@ import Landing from './landing/Landing';
 import Scholars from './Scholars';
 import Contact from './Contact';
 import Calendar from './Calendar';
-import Benefits from './Benefits';
+import About from './About';
 import Projects from './projects/Projects';
 import New from './projects/New';
 import Project from './projects/Project';
 import Edit from './projects/Edit';
+import Delete from './projects/Delete';
 import Login from './Login';
 import Register from './Register';
 import Footer from './Footer';
@@ -63,11 +64,12 @@ class App extends Component {
               <Route path="/3sp" component={Scholars} />
               <Route path="/contact" component={Contact} />        
               <Route path="/calendar" component={Calendar} />
-              <Route path="/benefits" component={Benefits} />
+              <Route path="/about" component={About} />
               <Route exact path="/projects" component={Projects} />
               <Route exact path="/projects/a/new" component={New} />              
               <Route exact path={"/projects/:id"} component={Project} />
               <Route path={"/projects/:id/edit"} component={Edit} />
+              <Route path={"/projects/:id/delete"} component={Delete} />
               <Route path="/login" component={Login} />
               <Route path="/register" component={Register} />
             <Footer />

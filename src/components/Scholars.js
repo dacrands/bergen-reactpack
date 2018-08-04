@@ -10,7 +10,7 @@ class About extends Component {
                 <div className="container">
                     <div className="title">
                         <h1>About</h1>
-                        <hr className="hr"/>
+                        {/* <hr className="hr"/> */}
                     </div>                
                     <div className="box">
                         
@@ -95,14 +95,14 @@ class About extends Component {
                                 <h2>Program Elements</h2>
                             </div>
                             <div className="box__content-text">
-                                <ul>
+                                {/* <ul>
                                     <li><h3>Academic</h3></li>
                                     <li><h3>Research</h3></li>
                                     <li><h3>Service</h3></li>
-                                </ul>                            
-                                
-                                
-                                                            
+                                </ul>                             */}                               
+                                    <h3>Academic</h3>
+                                    <h3>Research</h3>
+                                    <h3>Service</h3>                                                          
                             </div>                                          
                         </div> {/* box__content */}
                     </div> {/* box  */} 
@@ -113,7 +113,7 @@ class About extends Component {
 
                     <div className="title">
                         <h1>Requirements</h1>
-                        <hr className="hr"/>
+                        {/* <hr className="hr"/> */}
                     </div>  
                     <div className="box box--block">
                         <div className="box__content">
@@ -168,7 +168,7 @@ class About extends Component {
                     ============ */}
                     <div className="title">
                         <h1>3SP Program Elements</h1>
-                        <hr className="hr"/>
+                        {/* <hr className="hr"/> */}
                     </div>
                     <div className="box">
                         <div className="box__content">

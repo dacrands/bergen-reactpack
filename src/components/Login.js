@@ -26,7 +26,7 @@ class Login extends Component {
         const data = new FormData(event.target);  
         let stringData = stringifyFormData(data);
 
-        fetch('/api/users/login', {            
+        fetch('https://www.bergenstem.com/api/users/login', {            
             method: "POST",
             credentials: "include",
             headers: {
@@ -37,6 +37,7 @@ class Login extends Component {
         .then(response => response.json())
         .then(user => {
             window.userData = user.userData;
+            this.props.history.push("/")
         })
         .catch(e => console.error(e));
     }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import Header from './Header';
 import '../styles/form.css';
 
@@ -17,30 +18,35 @@ class Contact extends Component {
             <div>
                 <Header title="Join STEM Club" />                
                 <div className="form__container">
+                    <p>* indicates a required field</p>
                     <form action="" className="form">
                         <div className="form__item">
-                            <label htmlFor="firstName" className="form__item-label">First name</label>
+                            <label htmlFor="firstName" className="form__item-label">First name *</label>
                             <input type="text" className="form__item-input" />
                         </div>
                         <div className="form__item">
-                            <label htmlFor="lastName" className="form__item-label">Last name</label>
+                            <label htmlFor="lastName" className="form__item-label">Last name *</label>
                             <input type="text" className="form__item-input" />
                         </div>
                         <div className="form__item">
-                            <label htmlFor="email" className="form__item-label">Email</label>
+                            <label htmlFor="email" className="form__item-label">Email *</label>
                             <input type="text" className="form__item-input" />
                         </div>
                         <div className="form__item">
-                            <label htmlFor="studentId" className="form__item-label">Student ID</label>
+                            <label htmlFor="studentId" className="form__item-label">Student ID *</label>
                             <input type="number" className="form__item-input" />
                         </div>
                         <div className="form__item">
-                            <label htmlFor="major" className="form__item-label">Major</label>
+                            <label htmlFor="major" className="form__item-label">Major *</label>
                             <input name="major" type="text" className="form__item-input"/>
                         </div>
                         <div className="form__item">
                             <label htmlFor="title" className="form__item-label">Project you wish to join</label>
                             <input name="title" type="text" className="form__item-input"/>
+                            <span className="form__desc" id="titleDesc">
+                                For a complete list of projects view the projects
+                                page <Link to={"/projects"}>here</Link>
+                            </span>
                         </div>
                         <p className="lead">or</p>
                         <div className="form__item">
