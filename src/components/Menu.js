@@ -13,6 +13,7 @@ class Menu extends Component {
       logoWidth: 60,
     };
     this.toggleMenu = this.toggleMenu.bind(this);
+    this.toggleDropdown = this.toggleDropdown.bind(this);
   }
 
   componentDidMount() {
@@ -47,6 +48,16 @@ class Menu extends Component {
       };
       this.setState({ mobileMenu: !pattyListBool });
       orderPatties(pattyList, pattyListBool);
+    }
+  }
+
+  toggleDropdown() {
+    const dropdownButton = this.refs.dropdownButton;
+    const dropdownMenu = this.refs.dropdownMenu;
+    const isVisible = dropdownMenu.style;
+    console.log(isVisible)
+    if (window.innerWidth <= 768 && isVisible) {
+      // dropdownMenu.style.display = "none";
     }
   }
 
@@ -110,12 +121,14 @@ class Menu extends Component {
           </li>
           <li className="menu__list-item" id="dropdown">
             <button
+                ref="dropdownButton"
                 className="menu__button menu__link"
                 id="dropdownButton"
+                onClick={this.toggleDropdown}
             >
               Resources&#x25BE;
             </button>
-            <ul className="menu__dropdown shadow">
+            <ul ref="dropdownMenu" className="menu__dropdown shadow">
                     <li className="menu__dropdown-item">
                         <Link
                                     onClick={this.toggleMenu}
