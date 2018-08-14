@@ -22,7 +22,7 @@ import Delete from './projects/Delete';
 import Login from './Login';
 import Register from './Register';
 import Footer from './Footer';
-
+import Blogs from "./projects/Blogs";
 
 class App extends Component {
 
@@ -70,6 +70,7 @@ class App extends Component {
               <Route exact path={"/projects/:id"} component={Project} />
               <Route path={"/projects/:id/edit"} component={Edit} />
               <Route path={"/projects/:id/delete"} component={Delete} />
+              <Route path={"/blogs/:id"} component={Blogs} />
               <Route path="/login" component={Login} />
               <Route path="/register" component={Register} />
             <Footer />

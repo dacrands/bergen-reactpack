@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 import Header from '../Header';
-import Blog from './Blog';
+import Blog from './Blogs';
 
 class Project extends Component {
     constructor(props) {
