@@ -10,9 +10,10 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
-      title: 'Bergen STEM',
-      meta: {viewport: 'width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0'},
-      favicon: './src/images/bcc-favicon.ico',
+      // title: 'Bergen STEM',
+      // meta: {viewport: 'width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0'},
+      // favicon: './src/images/bcc-favicon.ico',
+      template: 'index.html'
     }),
   ],
   output: {
