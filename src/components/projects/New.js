@@ -38,7 +38,7 @@ class New extends Component {
         const data = new FormData(event.target);  
         let stringData = stringifyFormData(data);
         
-        fetch('https://www.bergenstem.com/api/projects/createNewProject', {            
+        fetch('/api/projects/createNewProject', {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json; charset=utf-8"

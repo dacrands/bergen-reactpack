@@ -89,7 +89,7 @@ export default class Blogs extends Component {
   }
 
   componentDidMount() {
-    fetch('https://www.bergenstem.com/api/projects/getAllProjectMeta', {
+    fetch('/api/projects/getAllProjectMeta', {
       method: 'post',
     }).then(result => {
       return result.json()
@@ -159,7 +159,7 @@ export default class Blogs extends Component {
 
   handleBlogSubmit = () => {
     let rawHTML = stateToHTML(this.state.editorState.getCurrentContent());
-    fetch("/createProjectPost", {
+    fetch("/api/projects/createProjectPost", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

@@ -33,7 +33,7 @@ class Projects extends Component {
     }
 
     componentDidMount() {
-        fetch('https://www.bergenstem.com/api/projects/getAllProjectMeta', {
+        fetch('/api/projects/getAllProjectMeta', {
             method: 'post',
         })
         .then(result => {

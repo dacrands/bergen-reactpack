@@ -27,7 +27,7 @@ class Edit extends Component {
 
         // Throw the fetch into the task queue so we can setState
         setTimeout(()=> {
-            fetch(`https://www.bergenstem.com/api/projects/getProjectMetaData/${this.state.projectId}`, {
+            fetch(`/api/projects/getProjectMetaData/${this.state.projectId}`, {
                 method: "POST",
                 credentials: "include",
             }).then(result => {
@@ -69,7 +69,7 @@ class Edit extends Component {
         console.log(typeof sendData);
         console.log(sendData);
 
-        fetch('http://bccstem-env.ikpje5mqwr.us-east-1.elasticbeanstalk.com/api/projects/editProjectMeta', {            
+        fetch('/api/projects/editProjectMeta', {
             method: "POST",
             credentials: "include",
             headers: {

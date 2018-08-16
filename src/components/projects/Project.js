@@ -24,7 +24,7 @@ class Project extends Component {
         const projectId = this.props.match.params.id;
         this.setState({ projectId });
         setTimeout(()=> {
-            fetch(`https://www.bergenstem.com/api/projects/getProjectMetaData/${this.state.projectId}`, {
+            fetch(`/api/projects/getProjectMetaData/${this.state.projectId}`, {
                 method: 'post',
             }).then(result => {
                 return result.json()
