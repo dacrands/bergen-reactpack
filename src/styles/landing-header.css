@@ -28,9 +28,12 @@
     right: 0px;
     z-index: -1;
     background: var(--primary-light);    
-    background: -webkit-linear-gradient(-45deg, var(--primary-dark), var(--primary-light));  /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(-45deg, var(--primary-dark), var(--primary-light));  
     background: linear-gradient(-45deg, var(--primary-dark), var(--primary-light));
-    
+    background-image: url('../images/bgs/bcc-bg-3.svg');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
     /* transform: rotateX(10deg); */
 }
 

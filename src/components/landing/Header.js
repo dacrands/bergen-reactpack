@@ -1,17 +1,9 @@
 import React, { Component } from "react";
 import "../../styles/landing-header.css";
+// import Background from '../../images/bgs/bcc-bg.svg';
+
 
 class Header extends Component{
-  
-
-  componentDidMount(){
-    console.log('header');
-    const triangle = document.createElement('script');
-    triangle.src = 'https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.4.0/trianglify.min.js'
-    triangle.type = 'text/javascript'
-    document.body.appendChild(triangle);
-    
-  }
   
   render(){
     return(
@@ -19,7 +11,9 @@ class Header extends Component{
         <div className="overlay">
           Bergen STEM
          </div>        
-        <canvas id="myCanvas"></canvas>
+         {/* <Background style={{height:'100vh', width:'100%', position: 'absolute', zIndex:'-2'}}/> */}
+        <canvas id="myCanvas" style={{}}>       
+        </canvas>
       </header>
     )
   }

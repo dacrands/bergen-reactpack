@@ -17,7 +17,7 @@ module.exports = merge(common, {
       new OptimizeCSSAssetsPlugin({})
     ],
     splitChunks: {
-      chunks: 'all',
+      chunks: 'async',
       cacheGroups: {
         styles: {
           name: 'styles',
@@ -30,11 +30,11 @@ module.exports = merge(common, {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "[name].css",
+      filename: "[name].css",      
       chunkFilename: "[chunkhash].css"
     }),
     new webpack.DefinePlugin({
-    'process.env.NODE_ENV': JSON.stringify('production')
+      'process.env.NODE_ENV': JSON.stringify('production')
     })
   ]
 });
