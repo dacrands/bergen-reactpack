@@ -24,6 +24,15 @@ module.exports = merge(common, {
           test: /\.css$/,
           chunks: 'all',
           enforce: true
+        },
+        vendors: {
+          test: /[\\/]node_modules[\\/]/,
+          priority: -10
+        },
+        default: {
+          minChunks: 2,
+          priority: -20,
+          reuseExistingChunk: true
         }
       }
     },

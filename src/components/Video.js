@@ -28,7 +28,6 @@ class Video extends Component {
         this.refs.videoWrap.appendChild(iframe);
     }
 
-
     render() {
         return (
             <div>

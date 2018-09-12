@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {EditorState, convertToRaw, ContentState} from 'draft-js';
 import {Editor} from 'react-draft-wysiwyg';
 import createResizeablePlugin from 'draft-js-resizeable-plugin';
-import "./textEditor.css";
+import "../../styles/textEditor.css";
 import {stateToHTML} from "draft-js-export-html";
 
 export default class Blogs extends Component {
