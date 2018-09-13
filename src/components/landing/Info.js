@@ -49,7 +49,7 @@ class Info extends Component {
 
   render() {
     return (
-      <div className="info">
+      <div className="info">        
         {this.state.Info.map((info, index) => (
           <div key={index} className="info__content">
               <div>
@@ -64,7 +64,7 @@ class Info extends Component {
             <Link className="info__link" to={info.Link}>
                 {info.LinkText}
               </Link>
-          </div>
+          </div>          
           ))}
       </div>
     );
