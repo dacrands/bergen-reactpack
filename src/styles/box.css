@@ -15,7 +15,7 @@
 .title {
     
     color: var(--primary-light);
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -55,10 +55,6 @@
     justify-content: center;
 }
 
-.box p {
-    line-height: 1.4;
-}
-
 .box li {
     padding: 5px;
 }
@@ -86,11 +82,14 @@ BLOG BOX
 }
 
 
-@media (max-width:768px) {
-    .title {
-        font-size: 1.4rem;
-    }
+@media (max-width:768px) {    
     .box {
         grid-template-columns: repeat( auto-fill, minmax(97%, 1fr) );
+    }
+}
+
+@media (max-width:360px) {
+    .title {
+        font-size: 1rem;
     }
 }
