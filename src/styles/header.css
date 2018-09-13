@@ -1,7 +1,6 @@
 .header {    
     background: var(--primary-light);    
-    background: -webkit-linear-gradient(-45deg, var(--primary-dark), var(--primary-light));
-    background: linear-gradient(-45deg, var(--primary-dark), var(--primary-light));    
+    background: -webkit-linear-gradient(135deg, var(--primary-dark-bg), var(--primary-light));    
     min-height: 35vh;
     display: flex;
     flex-direction: column;
