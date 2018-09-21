@@ -1,6 +1,7 @@
 .form__container {
     /* outline: 2px dashed purple; */
     max-width: 500px;
+    width: 100%;
     margin: 10px auto;
     padding: 20px;
     margin-bottom: 50px;
@@ -16,11 +17,12 @@
 .form--height {
     min-height: 90vh;
     padding-top: 20vh;
+    display: flex;
+    align-items: center;
 }
 
 .form--dark {
-    background: linear-gradient(45deg, var(--primary-light),  var(--primary-dark));
-    
+    background: linear-gradient(45deg, var(--primary-light),  var(--primary-dark));    
     color: var(--comp);
     color: var(--light);
 }
@@ -29,8 +31,7 @@
     display: flex;
     flex-direction: column;
     margin: 1.5em 0;
-    font-size: 1.2rem;
-    
+    font-size: 1.2rem;    
 }
 
 .form__item input,
@@ -71,7 +72,7 @@
     padding: 5px 10px;
     font-size: 1.3rem;
     color: #ffffff;
-    transition: all 200ms ease-in;
+    transition: all 140ms ease-in;
     outline: none;
 }
 

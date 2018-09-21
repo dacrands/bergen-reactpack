@@ -31,9 +31,8 @@
     overflow: hidden;
     right: 0px;
     z-index: -1;
-    background-color: var(--primary-light);    
-    background: -webkit-linear-gradient(-45deg, var(--primary-dark), var(--primary-light));  
-    background: linear-gradient(-45deg, var(--primary-dark), var(--primary-light));    
+    background-color: hsl(253, 8%, 9%);    
+    background: -webkit-linear-gradient(135deg, hsl(253, 8%, 9%), var(--primary-light));  
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: cover;
