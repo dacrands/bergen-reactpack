@@ -54,150 +54,149 @@ class Menu extends Component {
   toggleDropdown() {
     const dropdownButton = this.refs.dropdownButton;
     const dropdownMenu = this.refs.dropdownMenu;
-    const isVisible = dropdownMenu.style;
-    console.log(isVisible)
-    if (window.innerWidth <= 768 && isVisible) {
-      // dropdownMenu.style.display = "none";
-    }
+    dropdownButton.addEventListener('click', e => {       
+      if (window.innerWidth <= 768) {
+        if (dropdownMenu.style.display === 'none') {
+          dropdownMenu.style.display = 'block';
+          dropdownMenu.style.visibility = 'visible';
+          dropdownMenu.style.opacity = '1';
+        } else {
+          dropdownMenu.style.display = 'none';
+          dropdownMenu.style.visibility = 'hidden';
+          dropdownMenu.style.opacity = '0';
+        }                
+      }
+    })
   }
 
   render() {
     return (
-      <nav className={this.props.isLanding ? 'menu' : 'menu'} ref="menu">
+      <nav className={this.props.isLanding ? 'menu' : 'menu'} ref="menu" role="navigation" ariaLabel="main navigation">
         <div className="menu__logo" ref="logo">
           <NavLink
             exact
             to="/"
             className="menu__logo-link"
             activeClassName='menu__link--active'
+            ariaLabel="home button"
           >
             <Logo />
           </NavLink>
         </div>
         <ul
-            className={this.state.mobileMenu ? 'menu__list menu__list--show' : 'menu__list'}
-            style={{ paddingRight: `${this.setPadding.bind(this)}px` }}
+          className={this.state.mobileMenu ? 'menu__list menu__list--show' : 'menu__list'}
+          style={{ paddingRight: `${this.setPadding.bind(this)}px` }}
         >
           <li className="menu__list-item">
             <NavLink
-                onClick={this.toggleMenu}
-                exact
-                to="/about"
-                className="menu__link"
-                activeClassName='menu__link--active'
+              onClick={this.toggleMenu}
+              exact
+              to="/about"
+              className="menu__link"
+              activeClassName='menu__link--active'
             >
               About
             </NavLink>
           </li>
           <li className="menu__list-item">
             <NavLink
-                onClick={this.toggleMenu}
-                to="/3sp"
-                className="menu__link"
-                activeClassName='menu__link--active'
+              onClick={this.toggleMenu}
+              to="/3sp"
+              className="menu__link"
+              activeClassName='menu__link--active'
             >
               3SP
             </NavLink>
           </li>
           <li className="menu__list-item">
             <NavLink
-                onClick={this.toggleMenu}
-                to="/projects"
-                className="menu__link"
-                activeClassName='menu__link--active'
+              onClick={this.toggleMenu}
+              to="/projects"
+              className="menu__link"
+              activeClassName='menu__link--active'
             >
               Projects
             </NavLink>
           </li>
           <li className="menu__list-item">
             <NavLink
-                onClick={this.toggleMenu}
-                to="/contact"
-                className="menu__link"
-                activeClassName='menu__link--active'
+              onClick={this.toggleMenu}
+              to="/contact"
+              className="menu__link"
+              activeClassName='menu__link--active'
             >
               Contact
             </NavLink>
           </li>
           <li className="menu__list-item" id="dropdown">
             <button
-                ref="dropdownButton"
-                className="menu__button menu__link"
-                id="dropdownButton"
-                onClick={this.toggleDropdown}
+              ref="dropdownButton"
+              className="menu__button menu__link"
+              id="dropdownButton"
+              onClick={this.toggleDropdown}
             >
               Resources&#x25BE;
             </button>
             <ul ref="dropdownMenu" className="menu__dropdown shadow">
-                    <li className="menu__dropdown-item">
-                        <Link
-                                    onClick={this.toggleMenu}
-                                    className="menu__dropdown-link"
-                                    to="/calendar"
-                                >
-                                    Calendar
+              <li className="menu__dropdown-item">
+                <Link
+                  onClick={this.toggleMenu}
+                  className="menu__dropdown-link"
+                  to="/calendar"
+                >
+                  Calendar
                           </Link>
-                        {/* <a className="menu__dropdown-link" href="">Other stuff</a> */}
-                      </li>
-                    {/* <li className="menu__dropdown-item">
-                                <Link
-                                    className="menu__link"
-                                    to="/calendar"
-
-                                >
-                                    Calendar
-                                </Link>
-                            </li> */}
-                    <li className="menu__dropdown-item">
-                        <a
-                                    className="menu__dropdown-link"
-                                    href="https://bergen.edu/faculty-staff/grants-administration/awards/stem/running-start-program/"
-                                    target="_blank"
-                                >
-                                    Running Start Program
+              </li>
+              <li className="menu__dropdown-item">
+                <a
+                  className="menu__dropdown-link"
+                  href="https://bergen.edu/faculty-staff/grants-administration/awards/stem/running-start-program/"
+                  target="_blank"
+                >
+                  Running Start Program
                           </a>
-                      </li>
-                    <li className="menu__dropdown-item">
-                        <a
-                                    className="menu__dropdown-link"
-                                    href="http://bergen.edu/stemsummit"
-                                    target="_blank"
-                                >
-                                    STEM Summit
+              </li>
+              <li className="menu__dropdown-item">
+                <a
+                  className="menu__dropdown-link"
+                  href="http://bergen.edu/stemsummit"
+                  target="_blank"
+                >
+                  STEM Summit
                           </a>
-                      </li>
-                    <hr className="hr"/>
-                    <li className="menu__dropdown-item">
-                        <Link
-                                    onClick={this.toggleMenu}
-                                    className="menu__dropdown-link"
-                                    to="/login"
-                                >
-                                Login
+              </li>
+              <hr className="hr" />
+              <li className="menu__dropdown-item">
+                <Link
+                  onClick={this.toggleMenu}
+                  className="menu__dropdown-link"
+                  to="/login"
+                >
+                  Login
                           </Link>
-                      </li>
-                    <li className="menu__dropdown-item">
-                        <Link
-                                    onClick={this.toggleMenu}
-                                    className="menu__dropdown-link"
-                                    to="/register"
-                                >
-                                Register
+              </li>
+              <li className="menu__dropdown-item">
+                <Link
+                  onClick={this.toggleMenu}
+                  className="menu__dropdown-link"
+                  to="/register"
+                >
+                  Register
                           </Link>
-                      </li>
-                  </ul>
+              </li>
+            </ul>
           </li>
         </ul>
 
         <div className="menu__burger">
           <button
-                        className="menu__button"
-                        aria-label="menu button"
-                        onClick={this.toggleMenu}>
+            className="menu__button"
+            aria-label="menu button"
+            onClick={this.toggleMenu}>
             <div ref="patties" className="patties">
-                    <div className="patty"></div>
-                    <div className="patty"></div>
-                  </div>
+              <div className="patty"></div>
+              <div className="patty"></div>
+            </div>
           </button>
         </div>
       </nav>
