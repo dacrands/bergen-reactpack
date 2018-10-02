@@ -20,6 +20,10 @@ class Menu extends Component {
     this.setState({
       logoWidth: this.refs.logo.clientWidth,
     });
+
+    window.addEventListener('resize', () => {
+      this.refs.dropdownMenu.style = "";
+    })
   }
 
   setPadding() {
@@ -54,7 +58,7 @@ class Menu extends Component {
   toggleDropdown() {
     const dropdownButton = this.refs.dropdownButton;
     const dropdownMenu = this.refs.dropdownMenu;
-    dropdownButton.addEventListener('click', e => {       
+    dropdownButton.addEventListener('click', e => {
       if (window.innerWidth <= 768) {
         if (dropdownMenu.style.display === 'none') {
           dropdownMenu.style.display = 'block';
@@ -64,7 +68,7 @@ class Menu extends Component {
           dropdownMenu.style.display = 'none';
           dropdownMenu.style.visibility = 'hidden';
           dropdownMenu.style.opacity = '0';
-        }                
+        }
       }
     })
   }
