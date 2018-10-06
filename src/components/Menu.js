@@ -75,14 +75,14 @@ class Menu extends Component {
 
   render() {
     return (
-      <nav className={this.props.isLanding ? 'menu' : 'menu'} ref="menu" role="navigation" ariaLabel="main navigation">
+      <nav className={this.props.isLanding ? 'menu' : 'menu'} ref="menu" role="navigation" aria-label="main navigation">
         <div className="menu__logo" ref="logo">
           <NavLink
             exact
             to="/"
             className="menu__logo-link"
             activeClassName='menu__link--active'
-            ariaLabel="home button"
+            aria-label="home button"
           >
             <Logo />
           </NavLink>

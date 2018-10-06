@@ -105,9 +105,6 @@ Remove default styles
     font-size: inherit;
 }
 
-.menu__button:focus {
-    outline: none;
-}
 
 
 /* =============
