@@ -13,6 +13,7 @@ import Contact from './Contact';
 import Calendar from './Calendar';
 import About from './About';
 import Projects from './projects/Projects';
+import Project from './projects/Project';
 import New from './projects/New';
 import Edit from './projects/Edit';
 import Delete from './projects/Delete';
@@ -35,6 +36,7 @@ const App = () => (
         <Route path="/calendar" component={Calendar} />
         <Route path="/about" component={About} />
         <Route exact path="/projects" component={Projects} />
+        <Route exact path="/projects/:id" component={Project} />
         <Route exact path="/projects/a/new" component={New} />
         <Route exact path={"/projects/:id/blog"} component={Blogs} />
         <Route path={"/projects/:id/edit"} component={Edit} />
