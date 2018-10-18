@@ -42,7 +42,6 @@ class Register extends Component {
     const data = new FormData(event.target);
     let stringData = stringifyFormData(data);
 
-    console.log(stringData)
     fetch("/api/users/register", {
       method: "POST",
       credentials: "include",

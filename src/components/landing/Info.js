@@ -64,7 +64,7 @@ class Info extends Component {
               {info.LinkText}
             </Link>
           </div>
-        ))};
+        ))}
       </div>
     );
   };
