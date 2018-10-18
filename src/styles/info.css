@@ -1,16 +1,9 @@
-.info {
-    /* outline: 4px solid orange; */
-    /* min-height: 40vh; */
+.info {    
     padding: 3rem 0;
     display: flex;
     justify-content: space-around;
     font-family: "Raleway",sans-serif;
     text-align: center;
-
-    /* background: #121213;
-    color: var(--light); */
-
-    /* background: var(--light); */
 }
 
 .info svg {
@@ -20,11 +13,6 @@
 }
 
 .info__content h2 {
-    /* outline: 3px solid red; */
-    /* max-width: min-content; */
-    /* white-space: nowrap; */
-    /* margin: 0 auto; */
-    /* margin: 0; */
     color: var(--primary-light);
     color: var(--dark);
     font-size: 1.8rem;
@@ -53,12 +41,7 @@
 }
 
 .info__link {
-    /* border: 1px solid var(--comp);
-    padding: 5px;
-    border-radius: 3px;
-    box-shadow: 1px 1px 3px rgba(0,0,0,0.2); */
     font-size: 1.2rem;
-    /* color: rgb(34, 99, 240); */
 }
 
 @media(max-width:768px) {

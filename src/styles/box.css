@@ -8,6 +8,7 @@
 .hr--light {
     background-color: white;
 }
+
 .hr--primary {
     background-color: var(--primary-dark);
 }
@@ -20,6 +21,9 @@
     margin: 0 auto;
 }
 
+/* -----------
+PROJECT BOX
+----------- */
 
 .project .box:first-of-type {
     margin-bottom: 15%;
@@ -28,6 +32,10 @@
 .project .box__text {
     align-self: center;
 }
+
+/* -----------
+     BOX
+----------- */
 
 .box {
     /* outline: 4px solid red; */

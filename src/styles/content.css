@@ -1,3 +1,6 @@
+/* -----------
+CONTENT
+----------- */
 .content {
     /* outline: 4px solid pink; */
     min-height: 70vh;
@@ -10,14 +13,11 @@
 }
 
 .content > div {
-    /* outline:1px red solid; */
-    /* flex:1 1 auto; */
     margin: 2rem;  
 }
 
 .content h1 {    
-    color: var(--primary-light);
-    /* font-weight: 100; */
+    color: var(--primary-light);    
     font-size: 2.3rem;    
 }
 

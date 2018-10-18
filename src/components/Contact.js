@@ -19,7 +19,7 @@ class Contact extends Component {
                 <Header title="Join STEM Club" />                
                 <div className="form__container">
                     <p>* indicates a required field</p>
-                    <form action="" className="form">
+                    <form action="https://formspree.io/stem@bergen.edu" method="POST" className="form">
                         <div className="form__item">
                             <label htmlFor="firstName" className="form__item-label">First name *</label>
                             <input required type="text" className="form__item-input" />
@@ -30,7 +30,7 @@ class Contact extends Component {
                         </div>
                         <div className="form__item">
                             <label htmlFor="email" className="form__item-label">Email *</label>
-                            <input required type="text" className="form__item-input" />
+                            <input required name="_replyto" type="text" className="form__item-input" />
                         </div>
                         <div className="form__item">
                             <label htmlFor="studentId" className="form__item-label">Student ID *</label>
@@ -62,7 +62,7 @@ class Contact extends Component {
                                 rows={15}>
                             </textarea>
                         </div>                        
-                        <button className="form__button">
+                        <button type="submit" className="form__button">
                             Submit
                         </button>                        
                     </form>  
