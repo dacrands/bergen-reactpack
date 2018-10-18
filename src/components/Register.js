@@ -71,19 +71,19 @@ class Register extends Component {
                 <label className="form__item-label" htmlFor="firstname">
                   First Name
                                 </label>
-                <input className="form__item-input" type="text" id="firstName" name="firstname" />
+                <input required className="form__item-input" type="text" id="firstName" name="firstname" />
               </div>
               <div className="form__item">
                 <label className="form__item-label" htmlFor="lastname">
                   Last Name
                                 </label>
-                <input className="form__item-input" type="text" id="lastName" name="lastname" />
+                <input required className="form__item-input" type="text" id="lastName" name="lastname" />
               </div>
               <div className="form__item">
                 <label className="form__item-label" htmlFor="username">
                   Email
                                 </label>
-                <input className="form__item-input" type="email" id="email" name="email" />
+                <input required className="form__item-input" type="email" id="email" name="email" />
               </div>
               <div className="form__item">
                 <label className="form__item-label" htmlFor="username">
@@ -95,13 +95,13 @@ class Register extends Component {
                 <label className="form__item-label" htmlFor="password">
                   Password
                                 </label>
-                <input className="form__item-input" ref="pass1" type="password" name="password" />
+                <input required className="form__item-input" ref="pass1" type="password" name="password" />
               </div>
               <div className="form__item">
                 <label className="form__item-label" htmlFor="repassword">
                   Re-enter password
                                 </label>
-                <input onChange={this.checkPassword.bind(this)} className="form__item-input" ref="pass2" type="password" />
+                <input required onChange={this.checkPassword.bind(this)} className="form__item-input" ref="pass2" type="password" />
               </div>
               <button className="form__button">Register</button>
             </form>

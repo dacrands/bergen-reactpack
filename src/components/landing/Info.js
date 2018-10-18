@@ -34,7 +34,7 @@ class Info extends Component {
         },
       ],
     };
-  }
+  };
 
   renderIcon(accent) {
     if (accent === 'books') {
@@ -43,32 +43,31 @@ class Info extends Component {
       return <School />;
     } else {
       return <Join />;
-    }
-    
-  }
+    };
+  };
 
   render() {
     return (
-      <div className="info">        
+      <div className="info">
         {this.state.Info.map((info, index) => (
           <div key={index} className="info__content">
-              <div>
-                {this.renderIcon(info.accent)}
-                <h2>
-                  {info.Title}
-                </h2>
-              </div>
-              <p>
-                {info.Desc}
-              </p>
+            <div>
+              {this.renderIcon(info.accent)}
+              <h2>
+                {info.Title}
+              </h2>
+            </div>
+            <p>
+              {info.Desc}
+            </p>
             <Link className="info__link" to={info.Link}>
-                {info.LinkText}
-              </Link>
-          </div>          
-          ))}
+              {info.LinkText}
+            </Link>
+          </div>
+        ))};
       </div>
     );
-  }
-}
+  };
+};
 
 export default Info;

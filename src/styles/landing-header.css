@@ -3,14 +3,17 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    height: 55vh;   
-    background-image: url('../images/bgs/bcc-bg-3.svg');
+    /* width: 100%; */
+    height: 65vh;   
+    max-width: 1200px;
+    margin: 0 auto;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    /* background-image: url('../images/bgs/groundstation.jpg');s */
     /* background: #000; */
     /* background: var(--primary-light); */
+    /* background: linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.2), rgba(0,0,0,0.9)); */
 }
 
 .overlay{
@@ -23,19 +26,20 @@
 }
 
 #myCanvas{
-    height: 55vh;
+    height: 65vh;
     width: 100%;
-    margin: 0;
+    margin: 0 auto;
     position: absolute;
-    top: 0px;
-    overflow: hidden;
-    right: 0px;
+    top: 0;
+    overflow: hidden;    
     z-index: -1;
     background-color: hsl(253, 8%, 9%);    
     background: -webkit-linear-gradient(135deg, hsl(253, 8%, 9%), var(--primary-light));  
+    /* background-image: url('../images/bgs/groundstation.jpg');
     background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: cover;
+    background-position: center;
+    max-width: 1600px;
+    background-size: cover; */
     /* transform: rotateX(10deg); */
 }
 

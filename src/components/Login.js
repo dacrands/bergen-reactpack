@@ -54,13 +54,13 @@ class Login extends Component {
               <label className="form__item-label" htmlFor="username">
                 Username
                         </label>
-              <input className="form__item-input" type="text" id="username" name="username" />
+              <input required className="form__item-input" type="text" id="username" name="username" />
             </div>
             <div className="form__item">
               <label className="form__item-label" htmlFor="password">
                 Password
                         </label>
-              <input className="form__item-input" type="password" name="password" />
+              <input required className="form__item-input" type="password" name="password" />
             </div>
             <button className="form__button form__button--dark">Login</button>
           </form>

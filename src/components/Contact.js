@@ -22,23 +22,23 @@ class Contact extends Component {
                     <form action="" className="form">
                         <div className="form__item">
                             <label htmlFor="firstName" className="form__item-label">First name *</label>
-                            <input type="text" className="form__item-input" />
+                            <input required type="text" className="form__item-input" />
                         </div>
                         <div className="form__item">
                             <label htmlFor="lastName" className="form__item-label">Last name *</label>
-                            <input type="text" className="form__item-input" />
+                            <input required type="text" className="form__item-input" />
                         </div>
                         <div className="form__item">
                             <label htmlFor="email" className="form__item-label">Email *</label>
-                            <input type="text" className="form__item-input" />
+                            <input required type="text" className="form__item-input" />
                         </div>
                         <div className="form__item">
                             <label htmlFor="studentId" className="form__item-label">Student ID *</label>
-                            <input type="number" className="form__item-input" />
+                            <input required type="number" className="form__item-input" />
                         </div>
                         <div className="form__item">
                             <label htmlFor="major" className="form__item-label">Major *</label>
-                            <input name="major" type="text" className="form__item-input"/>
+                            <input required name="major" type="text" className="form__item-input"/>
                         </div>
                         <div className="form__item">
                             <label htmlFor="title" className="form__item-label">Project you wish to join</label>

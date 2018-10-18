@@ -6,17 +6,12 @@ import Header from './Header';
 
 import '../../styles/info.css'
 
-class Landing extends Component {
-
-  render() {
-    return (
-      <div>
-        <Header />
-        <Info className="info" />
-        <Content />
-      </div>
-    );
-  }
-};
+const Landing = () => (
+  <div>
+    <Header />
+    <Info className="info" />
+    <Content />
+  </div>
+);
 
 export default Landing;
